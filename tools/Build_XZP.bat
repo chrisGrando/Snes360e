@@ -1,4 +1,4 @@
-// Original script written by Byrom90, edited by frankischilling for Snes360-enhanced
+:: Original script written by Byrom90, edited by frankischilling for Snes360-enhanced
 
 @if exist Snes360.xzp del Snes360.xzp
 
