@@ -242,7 +242,7 @@ static bool8	stopMovie = TRUE;
 static char		LastRomFilename[_MAX_PATH + 1] = "";
 
 //extern void DoAchievo(DWORD AcheivoID);  // Achievements disabled
-extern void UpdatePresence(DWORD type);
+//extern void UpdatePresence(DWORD type);
 
 
 static const uint32	crc32Table[256] =
@@ -1159,7 +1159,7 @@ again:
 	}
 
 	 
-	UpdatePresence(CONTEXT_GAMESTATE_INGAME);
+	//UpdatePresence(CONTEXT_GAMESTATE_INGAME);
 		
     return (TRUE);
 }

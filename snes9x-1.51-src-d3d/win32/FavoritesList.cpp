@@ -195,7 +195,7 @@ HRESULT CFavoritesList::OnNotify( XUINotify *hObj, BOOL& bHandled )
 			break;
 	}
 
-	UpdatePresence(CONTEXT_GAMESTATE_BROWSING_ROMS);
+	//UpdatePresence(CONTEXT_GAMESTATE_BROWSING_ROMS);
 
 	return S_OK;
 }

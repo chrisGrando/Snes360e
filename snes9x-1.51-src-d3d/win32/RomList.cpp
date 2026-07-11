@@ -328,7 +328,7 @@ HRESULT CRomList::OnNotify( XUINotify *hObj, BOOL& bHandled )
 
 	}
 
-	UpdatePresence(CONTEXT_GAMESTATE_BROWSING_ROMS);
+	//UpdatePresence(CONTEXT_GAMESTATE_BROWSING_ROMS);
 
 	return S_OK;
 

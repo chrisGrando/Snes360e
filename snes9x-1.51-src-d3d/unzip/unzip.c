@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <zlib.h>
+#include "../zLib/zlib.h"
 #include "unzip.h"
 #include "unzipP.h"
 

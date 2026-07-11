@@ -330,9 +330,6 @@
     <ClCompile Include="..\jma\7zlzma.cpp">
       <Filter>JMA</Filter>
     </ClCompile>
-    <ClCompile Include="..\jma\crc32.cpp">
-      <Filter>JMA</Filter>
-    </ClCompile>
     <ClCompile Include="..\jma\iiostrm.cpp">
       <Filter>JMA</Filter>
     </ClCompile>
@@ -377,6 +374,9 @@
     </ClCompile>
     <ClCompile Include="Storage.cpp">
       <Filter>Xbox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jma\CRC32lib.cpp">
+      <Filter>JMA</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -441,9 +441,6 @@
       <Filter>JMA</Filter>
     </ClInclude>
     <ClInclude Include="..\jma\btreecd.h">
-      <Filter>JMA</Filter>
-    </ClInclude>
-    <ClInclude Include="..\jma\crc32.h">
       <Filter>JMA</Filter>
     </ClInclude>
     <ClInclude Include="..\jma\iiostrm.h">
@@ -517,6 +514,9 @@
     </ClInclude>
     <ClInclude Include="types.h">
       <Filter>Xbox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\jma\CRC32lib.h">
+      <Filter>JMA</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -21,7 +21,7 @@ using namespace std;
 
 #include "portable.h"
 #include "7z.h"
-#include "crc32.h"
+#include "CRC32lib.h"
 
 namespace JMA
 {

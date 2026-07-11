@@ -139,6 +139,7 @@ const uLongf * ZEXPORT get_crc_table()
 #define DO8(buf)  DO4(buf); DO4(buf);
 
 /* ========================================================================= */
+#if !defined(EMUCRC32_STANDALONE)
 uLong ZEXPORT crc32(crc, buf, len)
     uLong crc;
     const Bytef *buf;
@@ -160,3 +161,4 @@ uLong ZEXPORT crc32(crc, buf, len)
     } while (--len);
     return crc ^ 0xffffffffL;
 }
+#endif
