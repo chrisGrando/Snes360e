@@ -1,25 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
-    <ProjectConfiguration Include="C core|Win32">
-      <Configuration>C core</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="C core|Xbox 360">
-      <Configuration>C core</Configuration>
-      <Platform>Xbox 360</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Debug|Win32">
-      <Configuration>Debug</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
     <ProjectConfiguration Include="Debug|Xbox 360">
       <Configuration>Debug</Configuration>
       <Platform>Xbox 360</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|Win32">
-      <Configuration>Release</Configuration>
-      <Platform>Win32</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Xbox 360">
       <Configuration>Release</Configuration>
@@ -32,23 +16,6 @@
     <RootNamespace>Snes9X</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseOfMfc>false</UseOfMfc>
-    <CharacterSet>MultiByte</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseOfMfc>false</UseOfMfc>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>MultiByte</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='C core|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseOfMfc>false</UseOfMfc>
-    <CharacterSet>MultiByte</CharacterSet>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
@@ -62,26 +29,8 @@
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <PlatformToolset>2010-01</PlatformToolset>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='C core|Xbox 360'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseOfMfc>false</UseOfMfc>
-    <UseOfAtl>false</UseOfAtl>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-  </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='C core|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -91,163 +40,22 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='C core|Xbox 360'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
-  </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='C core|Win32'">$(SolutionDir)bin\$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='C core|Win32'">$(SolutionDir)bin\intdir\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='C core|Win32'">false</LinkIncremental>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='C core|Xbox 360'">$(SolutionDir)bin\$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='C core|Xbox 360'">$(SolutionDir)bin\intdir\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
-    <OutputFile Condition="'$(Configuration)|$(Platform)'=='C core|Xbox 360'">snes9xw.exe</OutputFile>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='C core|Xbox 360'">false</LinkIncremental>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)bin\$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)bin\intdir\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">$(SolutionDir)bin\$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">$(SolutionDir)bin\intdir\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
     <OutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">$(OutDir)Snes360.exe</OutputFile>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">false</LinkIncremental>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)bin\$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)bin\intdir\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkIncremental>
+    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">$(ExecutablePath);$(VSInstallDir)VC\bin</ExecutablePath>
+    <ImageXexOutput Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">$(OutDir)$(ProjectName).xex</ImageXexOutput>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">$(SolutionDir)bin\$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">$(SolutionDir)bin\intdir\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
     <OutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">$(OutDir)Snes360-debug.exe</OutputFile>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">false</LinkIncremental>
     <ImageXexOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">$(OutDir)$(ProjectName)-debug.xex</ImageXexOutput>
     <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">$(ExecutablePath);$(VSInstallDir)VC\bin</ExecutablePath>
-    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">$(ExecutablePath);$(VSInstallDir)VC\bin</ExecutablePath>
-    <ImageXexOutput Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">$(OutDir)$(ProjectName).xex</ImageXexOutput>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='C core|Win32'">
-    <Midl>
-      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MkTypLibCompatible>true</MkTypLibCompatible>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>snes9xw.tlb</TypeLibraryName>
-      <HeaderFileName>
-      </HeaderFileName>
-    </Midl>
-    <ClCompile>
-      <Optimization>MaxSpeed</Optimization>
-      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>$(XEDK)\include\win32;$(ProjectDir);$(ProjectDir)\..\;$(ProjectDir)\..\..\;$(ProjectDir)\..\zLib;$(ProjectDir)\..\unzip;$(ProjectDir)\..\..\FMOD\api\inc;$(ProjectDir)\..\libPNG\src;$(ProjectDir)\..\snes9x;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>SDD1_DECOMP;CORRECT_VRAM_READS;HAVE_LIBPNG;SPC700_SHUTDOWN;CPU_SHUTDOWN;ZLIB;VAR_CYCLES;UNZIP_SUPPORT;ZSNES_FX;EXECUTE_SUPERFX_PER_LINE;__WIN32__;__MSC__;USE_OPENGL;NDEBUG;NETPLAY_SUPPORT;FMOD_SUPPORT;NEW_COLOUR_BLENDING;USE_OPENGL;NETPLAY_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <StructMemberAlignment>4Bytes</StructMemberAlignment>
-      <FunctionLevelLinking>false</FunctionLevelLinking>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
-      <PrecompiledHeaderOutputFile>snes9xw.pch</PrecompiledHeaderOutputFile>
-      <WarningLevel>TurnOffAllWarnings</WarningLevel>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <CompileAs>Default</CompileAs>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-    </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <Culture>0x0413</Culture>
-    </ResourceCompile>
-    <Link>
-      <AdditionalDependencies>$(SolutionDir)bin\TinyXML\$(Platform)\$(Configuration)\TinyXML.lib;libpngmt.lib;comctl32.lib;winmm.lib;opengl32.lib;glu32.lib;wsock32.lib;ddraw.lib;dsound.lib;dxguid.lib;delayimp.lib;fmodvc.lib;vfw32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>snes9xw.exe</OutputFile>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>$(XEDK)\lib\win32\vs2010;$(ProjectDir)..\..\FMOD\api\lib;$(ProjectDir)..\i386;$(ProjectDir)..\libPNG\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <DelayLoadDLLs>fmod.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>snes9xw.pdb</ProgramDatabaseFile>
-      <SubSystem>Windows</SubSystem>
-      <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <DataExecutionPrevention>
-      </DataExecutionPrevention>
-      <TargetMachine>MachineX86</TargetMachine>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='C core|Xbox 360'">
-    <Midl>
-      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MkTypLibCompatible>true</MkTypLibCompatible>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>snes9xw.tlb</TypeLibraryName>
-      <HeaderFileName>
-      </HeaderFileName>
-    </Midl>
-    <ClCompile>
-      <Optimization>MaxSpeed</Optimization>
-      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>$(XEDK)\include\xbox;$(ProjectDir);$(ProjectDir)\..\;$(ProjectDir)\..\..\;$(ProjectDir)\..\zLib;$(ProjectDir)\..\unzip;$(ProjectDir)\..\..\FMOD\api\inc;$(ProjectDir)\..\libPNG\src;$(ProjectDir)\..\snes9x</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>SDD1_DECOMP;CORRECT_VRAM_READS;HAVE_LIBPNG;SPC700_SHUTDOWN;CPU_SHUTDOWN;ZLIB;VAR_CYCLES;UNZIP_SUPPORT;ZSNES_FX;EXECUTE_SUPERFX_PER_LINE;__XBOX;__MSC__;USE_OPENGL;NDEBUG;NETPLAY_SUPPORT;FMOD_SUPPORT;NEW_COLOUR_BLENDING;EMUCRC32_STANDALONE</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <StructMemberAlignment>4Bytes</StructMemberAlignment>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderOutputFile>snes9xw.pch</PrecompiledHeaderOutputFile>
-      <WarningLevel>TurnOffAllWarnings</WarningLevel>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <CompileAs>Default</CompileAs>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-    </ClCompile>
-    <Link>
-      <AdditionalDependencies>$(SolutionDir)bin\TinyXML\$(Platform)\$(Configuration)\TinyXML.lib;libpngmt.lib;comctl32.lib;winmm.lib;opengl32.lib;glu32.lib;wsock32.lib;ddraw.lib;dsound.lib;dxguid.lib;delayimp.lib;fmodvc.lib;vfw32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(XEDK)\lib\xbox;$(ProjectDir)..\..\FMOD\api\lib;$(ProjectDir)..\i386;$(ProjectDir)..\libPNG\lib</AdditionalLibraryDirectories>
-      <ProgramDatabaseFile>snes9xw.pdb</ProgramDatabaseFile>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <Midl>
-      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MkTypLibCompatible>true</MkTypLibCompatible>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>snes9xw.tlb</TypeLibraryName>
-      <HeaderFileName>
-      </HeaderFileName>
-    </Midl>
-    <ClCompile>
-      <Optimization>Full</Optimization>
-      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
-      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <AdditionalIncludeDirectories>$(XEDK)\include\win32;$(ProjectDir)\..\;$(ProjectDir)\..\..\;$(ProjectDir)\..\zLib;$(ProjectDir)\..\unzip;$(ProjectDir)\..\..\FMOD\api\inc;$(ProjectDir)\..\libPNG\src;$(ProjectDir)\..\snes9x;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NDEBUG;HAVE_LIBPNG;SPC700_C;JMA_SUPPORT;SDD1_DECOMP;CORRECT_VRAM_READS;SPC700_SHUTDOWN;CPU_SHUTDOWN;ZLIB;VAR_CYCLES;UNZIP_SUPPORT;EXECUTE_SUPERFX_PER_LINE;__WIN32__;__MSC__;FMOD_SUPPORT;NEW_COLOUR_BLENDING;USE_OPENGL;NETPLAY_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <StructMemberAlignment>4Bytes</StructMemberAlignment>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeaderOutputFile>snes9xw.pch</PrecompiledHeaderOutputFile>
-      <BrowseInformation>true</BrowseInformation>
-      <WarningLevel>TurnOffAllWarnings</WarningLevel>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <CompileAs>Default</CompileAs>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-    </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <Culture>0x0809</Culture>
-    </ResourceCompile>
-    <Link>
-      <AdditionalDependencies>$(SolutionDir)bin\TinyXML\$(Platform)\$(Configuration)\TinyXML.lib;libpngmt.lib;comctl32.lib;winmm.lib;opengl32.lib;glu32.lib;wsock32.lib;ddraw.lib;dsound.lib;dxguid.lib;delayimp.lib;vfw32.lib;xapobase.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>snes9x.exe</OutputFile>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>$(XEDK)\lib\win32\vs2010;$(ProjectDir)\..\..\FMOD\api\lib;$(ProjectDir)\..\..\FMODEx\api\lib;$(ProjectDir)\..\i386;$(ProjectDir)\..\libPNG\src\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <DelayLoadDLLs>fmod.dll;fmodexp.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>snes9x.pdb</ProgramDatabaseFile>
-      <SubSystem>Windows</SubSystem>
-      <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <DataExecutionPrevention>
-      </DataExecutionPrevention>
-      <TargetMachine>MachineX86</TargetMachine>
-    </Link>
-  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">
     <Midl>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -277,59 +85,19 @@
       <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
       <AdditionalDependencies>$(SolutionDir)bin\TinyXML\$(Platform)\$(Configuration)\TinyXML.lib;d3d9.lib;xgraphics.lib;xapilib.lib;xaudio2.lib;x3daudio.lib;xmcore.lib;xboxkrnl.lib;xbdm.lib;xact3.lib;xuirun.lib;xuirender.lib;xmedia2.lib;xuivideo.lib;xnet.lib;xuihtml.lib;xonline.lib;xmp.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(XEDK)\lib\xbox;$(ProjectDir)\..\..\FMOD\api\lib;$(ProjectDir)\..\..\FMODEx\api\lib;$(ProjectDir)\..\i386;$(ProjectDir)\..\libPNG\src\lib</AdditionalLibraryDirectories>
-      <ProgramDatabaseFile>Snes360.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(OutDir)Snes360.pdb</ProgramDatabaseFile>
       <Version>1.0</Version>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProfileGuidedDatabase>$(OutDir)$(TargetName).pgd</ProfileGuidedDatabase>
     </Link>
     <ImageXex>
       <ConfigurationFile>xex.xml</ConfigurationFile>
     </ImageXex>
     <Deploy />
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <Midl>
-      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MkTypLibCompatible>true</MkTypLibCompatible>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>snes9xw.tlb</TypeLibraryName>
-      <HeaderFileName>
-      </HeaderFileName>
-    </Midl>
-    <ClCompile>
-      <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(XEDK)\include\win32;$(ProjectDir);$(ProjectDir)\..\;$(ProjectDir)\..\..\;$(ProjectDir)\..\zLib;$(ProjectDir)\..\unzip;$(ProjectDir)\..\..\FMOD\api\inc;$(ProjectDir)\..\libPNG\src;$(ProjectDir)\..\snes9x;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_DEBUG;HAVE_LIBPNG;SPC700_C;JMA_SUPPORT;SDD1_DECOMP;CORRECT_VRAM_READS;SPC700_SHUTDOWN;CPU_SHUTDOWN;ZLIB;VAR_CYCLES;UNZIP_SUPPORT;EXECUTE_SUPERFX_PER_LINE;__WIN32__;__MSC__;NEW_COLOUR_BLENDING;USE_OPENGL;NETPLAY_SUPPORT;USE_DIRECTX3D;FMOD_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <StructMemberAlignment>4Bytes</StructMemberAlignment>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
-      <PrecompiledHeaderOutputFile>snes9xw.pch</PrecompiledHeaderOutputFile>
-      <BrowseInformation>true</BrowseInformation>
-      <WarningLevel>Level2</WarningLevel>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <CompileAs>Default</CompileAs>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-    </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <Culture>0x0413</Culture>
-    </ResourceCompile>
-    <Link>
-      <AdditionalDependencies>$(SolutionDir)bin\TinyXML\$(Platform)\$(Configuration)\TinyXML.lib;libpngmt.lib;comctl32.lib;winmm.lib;opengl32.lib;glu32.lib;wsock32.lib;ddraw.lib;dsound.lib;dxguid.lib;delayimp.lib;vfw32.lib;xapobase.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>Snes9x-debug.exe</OutputFile>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>$(XEDK)\lib\win32\vs2010;$(ProjectDir)\..\..\FMOD\api\lib;$(ProjectDir)\..\..\FMODEx\api\lib;$(ProjectDir)\..\i386;$(ProjectDir)\..\libPNG\src\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <DelayLoadDLLs>fmod.dll;fmodexp.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>Snes9x.pdb</ProgramDatabaseFile>
-      <GenerateMapFile>false</GenerateMapFile>
-      <SubSystem>Windows</SubSystem>
-      <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <DataExecutionPrevention>
-      </DataExecutionPrevention>
-      <TargetMachine>MachineX86</TargetMachine>
-    </Link>
+    <Deploy>
+      <DeploymentFiles>$(RemoteRoot)=$(ImagePath);$(RemoteRoot)\media=$(OutDir)media</DeploymentFiles>
+      <ForceCopy>true</ForceCopy>
+    </Deploy>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">
     <Midl>
@@ -361,9 +129,10 @@
       <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
       <AdditionalDependencies>$(SolutionDir)bin\TinyXML\$(Platform)\$(Configuration)\TinyXML.lib;d3d9d.lib;xgraphicsd.lib;xapilibd.lib;xaudiod2.lib;x3daudiod.lib;xmcored.lib;xboxkrnl.lib;xbdm.lib;xactd3.lib;xuirund.lib;xuirenderd.lib;xmediad2.lib;xuivideod.lib;xnetd.lib;xuihtml.lib;xonline.lib;xmpd.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(XEDK)\lib\xbox;$(ProjectDir)\..\..\FMOD\api\lib;$(ProjectDir)\..\..\FMODEx\api\lib;$(ProjectDir)\..\i386;$(ProjectDir)\..\libPNG\src\lib</AdditionalLibraryDirectories>
-      <ProgramDatabaseFile>Snes360-debug.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(OutDir)Snes360-debug.pdb</ProgramDatabaseFile>
       <Version>1.0</Version>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProfileGuidedDatabase>$(OutDir)$(TargetName).pgd</ProfileGuidedDatabase>
     </Link>
     <ImageXex>
       <ConfigurationFile>xex.xml</ConfigurationFile>
@@ -385,8 +154,6 @@
     <ClCompile Include="..\conffile.cpp" />
     <ClCompile Include="..\controls.cpp" />
     <ClCompile Include="..\cpu.cpp">
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Disabled</Optimization>
-      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Default</InlineFunctionExpansion>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">Disabled</Optimization>
       <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">Default</InlineFunctionExpansion>
     </ClCompile>
@@ -396,60 +163,32 @@
     <ClCompile Include="..\data.cpp" />
     <ClCompile Include="..\debug.cpp" />
     <ClCompile Include="..\dma.cpp">
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Disabled</Optimization>
-      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Default</InlineFunctionExpansion>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">Disabled</Optimization>
       <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">Default</InlineFunctionExpansion>
     </ClCompile>
     <ClCompile Include="..\dsp1.cpp" />
     <ClCompile Include="..\dsp1emu.c">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='C core|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='C core|Xbox 360'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\dsp2emu.c">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='C core|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='C core|Xbox 360'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\dsp3emu.c">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='C core|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='C core|Xbox 360'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\dsp4emu.c">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='C core|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='C core|Xbox 360'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\fxdbg.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='C core|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='C core|Xbox 360'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\fxemu.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='C core|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='C core|Xbox 360'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="..\fxinst.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='C core|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='C core|Xbox 360'">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="..\fxemu.cpp" />
+    <ClCompile Include="..\fxinst.cpp" />
     <ClCompile Include="..\gfx.cpp" />
     <ClCompile Include="..\globals.cpp" />
     <ClCompile Include="..\loadzip.cpp" />
@@ -479,9 +218,6 @@
     <ClCompile Include="..\spc7110.cpp" />
     <ClCompile Include="..\srtc.cpp" />
     <ClCompile Include="..\tile.cpp">
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AnySuitable</InlineFunctionExpansion>
-      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Speed</FavorSizeOrSpeed>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">MaxSpeed</Optimization>
       <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">AnySuitable</InlineFunctionExpansion>
       <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">Speed</FavorSizeOrSpeed>
@@ -502,28 +238,12 @@
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">CompileAsC</CompileAs>
     </ClCompile>
     <ClCompile Include="..\unzip\Explode.c">
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='C core|Win32'">MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='C core|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='C core|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='C core|Xbox 360'">MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='C core|Xbox 360'">
-      </AdditionalIncludeDirectories>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='C core|Xbox 360'">
-      </PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">Disabled</Optimization>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">
       </AdditionalIncludeDirectories>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">
       </PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">MaxSpeed</Optimization>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">
       </AdditionalIncludeDirectories>
@@ -554,28 +274,12 @@
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">CompileAsC</CompileAs>
     </ClCompile>
     <ClCompile Include="..\unzip\Unreduce.c">
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='C core|Win32'">MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='C core|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='C core|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='C core|Xbox 360'">MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='C core|Xbox 360'">
-      </AdditionalIncludeDirectories>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='C core|Xbox 360'">
-      </PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">Disabled</Optimization>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">
       </AdditionalIncludeDirectories>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">
       </PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">MaxSpeed</Optimization>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">
       </AdditionalIncludeDirectories>
@@ -585,28 +289,12 @@
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">CompileAsC</CompileAs>
     </ClCompile>
     <ClCompile Include="..\unzip\Unshrink.c">
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='C core|Win32'">MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='C core|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='C core|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='C core|Xbox 360'">MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='C core|Xbox 360'">
-      </AdditionalIncludeDirectories>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='C core|Xbox 360'">
-      </PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">Disabled</Optimization>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">
       </AdditionalIncludeDirectories>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">
       </PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">MaxSpeed</Optimization>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">
       </AdditionalIncludeDirectories>
@@ -616,28 +304,12 @@
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">CompileAsC</CompileAs>
     </ClCompile>
     <ClCompile Include="..\unzip\Unzip.c">
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='C core|Win32'">MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='C core|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='C core|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='C core|Xbox 360'">MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='C core|Xbox 360'">
-      </AdditionalIncludeDirectories>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='C core|Xbox 360'">
-      </PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">Disabled</Optimization>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">
       </AdditionalIncludeDirectories>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">
       </PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">MaxSpeed</Optimization>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">
       </AdditionalIncludeDirectories>
@@ -701,9 +373,7 @@
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">CompileAsC</CompileAs>
     </ClCompile>
     <ClCompile Include="auxmath.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="CXAudio2.cpp" />
@@ -793,9 +463,7 @@
       <FileType>CppCode</FileType>
     </ClInclude>
     <CustomBuildStep Include="auxmath.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">true</ExcludedFromBuild>
     </CustomBuildStep>
     <ClInclude Include="CXAudio2.h" />
@@ -826,7 +494,6 @@
     <ClInclude Include="..\jma\s9x-jma.h" />
     <ClInclude Include="..\jma\winout.h" />
     <CustomBuildStep Include="Achievements.spa.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='C core|Xbox 360'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">true</ExcludedFromBuild>
     </CustomBuildStep>
@@ -846,7 +513,6 @@
   <ItemGroup>
     <CustomBuildStep Include="Snes 360.xlast">
       <FileType>Document</FileType>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='C core|Xbox 360'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">true</ExcludedFromBuild>
     </CustomBuildStep>
@@ -889,11 +555,7 @@ fxc.exe "%(FullPath)" /nologo /Tps_3_0 /EShadePixel /DEntryPoint_ShadePixel /XZi
     </CustomBuild>
     <CustomBuildStep Include="snes9x.cfg">
       <FileType>Document</FileType>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='C core|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='C core|Xbox 360'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">true</ExcludedFromBuild>
     </CustomBuildStep>
   </ItemGroup>
