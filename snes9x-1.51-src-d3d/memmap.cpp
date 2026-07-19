@@ -1520,7 +1520,7 @@ bool8 CMemory::SaveSRAM (const char *filename)
 		size = (1 << (Multi.sramSizeB + 3)) * 128;
  
 		snesStoreage.WriteSaveGame(sramName,romName, (char *) (char *) Multi.sramB, (DWORD)size);
-		snesStoreage.WriteThumbnail(sramName, "game:\\media\\saveicon.png" );
+		snesStoreage.WriteThumbnail(sramName, "GAME:\\media\\saveicon.png" );
 
 		strcpy(ROMFilename, temp);
     }
@@ -1543,7 +1543,7 @@ bool8 CMemory::SaveSRAM (const char *filename)
 	{
 		 
 		snesStoreage.WriteSaveGame(sramName,romName, (char *) SRAM, (DWORD)size);
-		snesStoreage.WriteThumbnail(sramName, "game:\\media\\saveicon.png" );
+		snesStoreage.WriteThumbnail(sramName, "GAME:\\media\\saveicon.png" );
  
 		if (Settings.SPC7110RTC)
 			S9xSaveSPC7110RTC(&rtc_f9);

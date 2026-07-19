@@ -969,7 +969,7 @@ bool8 S9xFreezeGame (const char *filename)
 
 		snesStoreage.CloseStream(stream, &xov);
 		CloseHandle(hEventComplete);
-		snesStoreage.WriteThumbnail(filename, "game:\\media\\saveicon.png" );
+		snesStoreage.WriteThumbnail(filename, "GAME:\\media\\saveicon.png" );
 
 		return (TRUE);
     }

@@ -20,7 +20,7 @@ static CHAR g_szSaveRoot[] = "save";
 //--------------------------------------------------------------------------------------
 static CHAR g_szSaveGame[] = "save:\\savegame.txt";
 
-static CHAR g_szThumbnailImage[] = "game:\\saveicon.png";
+static CHAR g_szThumbnailImage[] = "GAME:\\saveicon.png";
 
 static DWORD  m_dwMinUsers                   = 1;     
 static DWORD  m_dwMaxUsers                   = 1;     

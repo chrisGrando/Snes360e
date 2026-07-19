@@ -299,7 +299,7 @@ HRESULT CFavoritesListScene::OnNotifyPress( HXUIOBJ hObjPressed,
 			
 			// Create the InGameOptions scene and navigate to it (required for RunEmulation to work)
 			// The scene will be hidden until user presses both sticks in-game
-			HRESULT hr = XuiSceneCreate( L"file://game:/media/Snes360.xzp#..\\Xbox\\Skin\\", L"InGameOptions.xur", NULL, &hScene );
+			HRESULT hr = XuiSceneCreate( L"file://GAME:/media/Snes360.xzp#..\\Xbox\\Skin\\", L"InGameOptions.xur", NULL, &hScene );
 			if (SUCCEEDED(hr))
 			{
 				// Navigate forward to the scene (needed for RunEmulation context)
@@ -479,7 +479,7 @@ VOID CFavoritesListScene::LaunchPendingRom()
 	}
 	
 	// Create the InGameOptions scene and navigate to it
-	HRESULT hr = XuiSceneCreate( L"file://game:/media/Snes360.xzp#..\\Xbox\\Skin\\", L"InGameOptions.xur", NULL, &hScene );
+	HRESULT hr = XuiSceneCreate( L"file://GAME:/media/Snes360.xzp#..\\Xbox\\Skin\\", L"InGameOptions.xur", NULL, &hScene );
 	if (SUCCEEDED(hr))
 	{
 		this->NavigateForward(hScene);

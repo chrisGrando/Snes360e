@@ -120,13 +120,13 @@ CEffectScene::~CEffectScene()
 			return S_FALSE;
 
 		// load our displacement texture
-		hr = D3DXCreateTextureFromFile( pDevice, "game:\\media\\XuiEffect_Texture.png", &m_pTexDisplacement );
+		hr = D3DXCreateTextureFromFile( pDevice, "GAME:\\media\\XuiEffect_Texture.png", &m_pTexDisplacement );
 		if( FAILED( hr ) )
 			return S_FALSE;
 
 		// load our vertex and pixel shaders
 		VOID* pCode = NULL;
-		hr = LoadFile( "game:\\Media\\Shaders\\ShadeXuiEffectVertex.xvu", &pCode, &pdwFileSize);
+		hr = LoadFile( "GAME:\\media\\shaders\\ShadeXuiEffectVertex.xvu", &pCode, &pdwFileSize);
 		if( FAILED( hr ) )
 			return S_FALSE;
 
@@ -138,7 +138,7 @@ CEffectScene::~CEffectScene()
 
 		 
 
-		hr = LoadFile( "game:\\Media\\Shaders\\ShadeXuiEffectPixel.xpu", &pCode, &pdwFileSizeShader );
+		hr = LoadFile( "GAME:\\media\\shaders\\ShadeXuiEffectPixel.xpu", &pCode, &pdwFileSizeShader );
 		if( FAILED( hr ) )
 			return S_FALSE;
 
@@ -395,7 +395,7 @@ public:
         {
 			OutputDebugStringW(L"Favorites button pressed - loading scene\n");
 			// Favorites button - load FavoritesListScene.xur
-			HRESULT hr = XuiSceneCreate( L"file://game:/media/Snes360.xzp#..\\Xbox\\Skin\\", L"FavoritesListScene.xur", NULL, &hFavoritesListScene );
+			HRESULT hr = XuiSceneCreate( L"file://GAME:/media/Snes360.xzp#..\\Xbox\\Skin\\", L"FavoritesListScene.xur", NULL, &hFavoritesListScene );
 			if (SUCCEEDED(hr))
 			{
 				OutputDebugStringW(L"FavoritesListScene.xur loaded successfully, navigating...\n");
@@ -415,7 +415,7 @@ public:
 		if( hObjPressed == m_button4 )
 		{
 			const WCHAR * button_text = L"OK";
-			ShowMessageBoxEx(NULL,NULL,L"About", L"Snes360e V1.0\n\n\nOriginal by Anonymous > 2010/07/16 - 11:59pm\nEnhanced by frankischilling > 2025\nModded version by chrisGrando > 2026\n\n\nGreets to r0wdy, Arak0n, kl0wn, idc, direw0lf, PeteNub, MomDad, Odb718, Angerwound, Redline99, TJ_CRS, Xenon7, Xantium, _skitzo_\n\nDonations not required!\n\nFUCK Hawk, Jester\n\n", 1, (LPCWSTR*)&button_text,NULL,  XUI_MB_CENTER_ON_PARENT, NULL);
+			ShowMessageBoxEx(NULL,NULL,L"About", L"Snes360e v1.0\n\nOriginal by Anonymous -> 2010/07/16 - 11:59pm\nEnhanced by frankischilling -> 2025\nModded version by chrisGrando -> 2026\n\nGreets to r0wdy, Arak0n, kl0wn, idc, direw0lf, PeteNub, MomDad, Odb718, Angerwound, Redline99, TJ_CRS, Xenon7, Xantium, _skitzo_\n\nDonations not required!\n\nFUCK Hawk, Jester\n\n", 1, (LPCWSTR*)&button_text,NULL,  XUI_MB_CENTER_ON_PARENT, NULL);
 			//DoAchievo(ACHIEVEMENT_FREEXEX_DISS);  // Achievements disabled
 			
 
@@ -573,7 +573,7 @@ public:
 		//GetChildById( L"XuiLogo", &m_Logo );
 		 
 		// Set version text dynamically
-		m_VersionText.SetText(L"Version 0.35 Beta");
+		m_VersionText.SetText(L"Version 1.0");
 	 
 		SetEffectValue( 20 );
 
@@ -728,7 +728,7 @@ VOID __cdecl main()
     }
 
     // Register a default typeface
-    hr = app.RegisterDefaultTypeface( L"Arial Unicode MS", L"file://game:/media/Snes360.ttf" );
+    hr = app.RegisterDefaultTypeface( L"Arial Unicode MS", L"file://GAME:/media/Snes360.ttf" );
     if( FAILED( hr ) )
     {
         OutputDebugString( "Failed to register default typeface.\n" );
@@ -778,9 +778,9 @@ VOID __cdecl main()
 
  
     // Load the skin file used for the scene.
-	app.LoadSkin( L"file://game:/media/Snes360.xzp#..\\Xbox\\Skin\\skin.xur" );
+	app.LoadSkin( L"file://GAME:/media/Snes360.xzp#..\\Xbox\\Skin\\skin.xur" );
      	
-	XuiSceneCreate( L"file://game:/media/Snes360.xzp#..\\Xbox\\Skin\\", L"Mario.xur", NULL, &hMainScene );
+	XuiSceneCreate( L"file://GAME:/media/Snes360.xzp#..\\Xbox\\Skin\\", L"Mario.xur", NULL, &hMainScene );
 	 
 
 	XuiSceneNavigateFirst( app.GetRootObj(), hMainScene, XUSER_INDEX_FOCUS );
