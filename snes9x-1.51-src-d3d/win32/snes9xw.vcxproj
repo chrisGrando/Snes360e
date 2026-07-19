@@ -543,8 +543,8 @@
     </CustomBuild>
     <CustomBuild Include="..\xbox\waveeffect.hlsl">
       <Message Condition="'$(Platform)'=='Xbox 360'">Compile shaders in %(FullPath)</Message>
-      <Command Condition="'$(Platform)'=='Xbox 360'">fxc.exe "%(FullPath)" /nologo /Tvs_3_0 /EShadeVertex /DEntryPoint_ShadeVertex /XZi /XFd"$(OutDir)VS_%(Filename)_ShadeVertex.updb" /Fo"$(IntDir)media\shaders\ShadeXuiEffectVertex.xvu"
-fxc.exe "%(FullPath)" /nologo /Tps_3_0 /EShadePixel /DEntryPoint_ShadePixel /XZi /XFd"$(OutDir)VS_%(Filename)_ShadePixel.updb" /Fo"$(IntDir)media\shaders\ShadeXuiEffectPixel.xpu"
+      <Command Condition="'$(Platform)'=='Xbox 360'">fxc.exe "%(FullPath)" /nologo /Tvs_3_0 /EShadeVertex /DEntryPoint_ShadeVertex /XZi /XFd"$(OutDir)VS_%(Filename)_ShadeVertex.updb" /Fo"$(OutDir)media\shaders\ShadeXuiEffectVertex.xvu"
+fxc.exe "%(FullPath)" /nologo /Tps_3_0 /EShadePixel /DEntryPoint_ShadePixel /XZi /XFd"$(OutDir)VS_%(Filename)_ShadePixel.updb" /Fo"$(OutDir)media\shaders\ShadeXuiEffectPixel.xpu"
 </Command>
       <Outputs Condition="'$(Platform)'=='Xbox 360'">$(OutDir)media\shaders\ShadeXuiEffectVertex.xvu;$(OutDir)media\shaders\ShadeXuiEffectPixel.xpu;%(Outputs)</Outputs>
     </CustomBuild>
