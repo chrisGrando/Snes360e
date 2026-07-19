@@ -530,9 +530,9 @@
     <None Include="..\xbox\Shaders\SimpleAA.fx" />
     <CustomBuild Include="..\xbox\Shaders\Super2xSaI.fx">
       <ExcludedFromBuild Condition="'$(Platform)'=='Xbox 360'">true</ExcludedFromBuild>
-      <Command Condition="'$(Platform)'=='Xbox 360'">fxc /Tfxl_3_0 /XZi /XFd"$(OutDir)FXL_%(Filename).updb" /Fo"$(OutDir)Media\Shaders\%(Filename).fxobj" "..\Xbox\Shaders\%(Filename)%(Extension)"
+      <Command Condition="'$(Platform)'=='Xbox 360'">fxc /Tfxl_3_0 /XZi /XFd"$(OutDir)FXL_%(Filename).updb" /Fo"$(OutDir)media\shaders\%(Filename).fxobj" "..\Xbox\Shaders\%(Filename)%(Extension)"
 </Command>
-      <Outputs Condition="'$(Platform)'=='Xbox 360'">$(OutDir)Media\Shaders\%(Filename).fxobj;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Platform)'=='Xbox 360'">$(OutDir)media\shaders\%(Filename).fxobj;%(Outputs)</Outputs>
     </CustomBuild>
     <None Include="..\xbox\Shaders\SuperEagle.fx" />
     <None Include="..\xbox\Skin\saveicon.png" />
@@ -543,10 +543,10 @@
     </CustomBuild>
     <CustomBuild Include="..\xbox\waveeffect.hlsl">
       <Message Condition="'$(Platform)'=='Xbox 360'">Compile shaders in %(FullPath)</Message>
-      <Command Condition="'$(Platform)'=='Xbox 360'">fxc.exe "%(FullPath)" /nologo /Tvs_3_0 /EShadeVertex /DEntryPoint_ShadeVertex /XZi /XFd"$(OutDir)VS_%(Filename)_ShadeVertex.updb" /Fo"$(IntDir)Media\Shaders\ShadeXuiEffectVertex.xvu"
-fxc.exe "%(FullPath)" /nologo /Tps_3_0 /EShadePixel /DEntryPoint_ShadePixel /XZi /XFd"$(OutDir)VS_%(Filename)_ShadePixel.updb" /Fo"$(IntDir)Media\Shaders\ShadeXuiEffectPixel.xpu"
+      <Command Condition="'$(Platform)'=='Xbox 360'">fxc.exe "%(FullPath)" /nologo /Tvs_3_0 /EShadeVertex /DEntryPoint_ShadeVertex /XZi /XFd"$(OutDir)VS_%(Filename)_ShadeVertex.updb" /Fo"$(IntDir)media\shaders\ShadeXuiEffectVertex.xvu"
+fxc.exe "%(FullPath)" /nologo /Tps_3_0 /EShadePixel /DEntryPoint_ShadePixel /XZi /XFd"$(OutDir)VS_%(Filename)_ShadePixel.updb" /Fo"$(IntDir)media\shaders\ShadeXuiEffectPixel.xpu"
 </Command>
-      <Outputs Condition="'$(Platform)'=='Xbox 360'">$(IntDir)Media\Shaders\ShadeXuiEffectVertex.xvu;$(IntDir)Media\Shaders\ShadeXuiEffectPixel.xpu;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Platform)'=='Xbox 360'">$(OutDir)media\shaders\ShadeXuiEffectVertex.xvu;$(OutDir)media\shaders\ShadeXuiEffectPixel.xpu;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="..\xbox\XuiEffect_Texture.png">
       <Command Condition="'$(Platform)'=='Xbox 360'">copy "%(FullPath)" "$(OutDir)media\%(Filename)%(Extension)"
