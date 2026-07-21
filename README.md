@@ -19,14 +19,14 @@ Based on the original Xbox 360 port (Snes360 v0.32 Beta, credited to "Anonymous"
 + [Features Showcase](#features-showcase)
 + [What's New](#whats-new)
 + [Build](#build)
-+ [Building the XZP Package (Customizing the XUI Skin)](#building-the-xzp-package-customizing-the-xui-skin)
++ [Building the XZP Package (Customizing the XUI Skin)](#building-xzp-package)
 + [Controls](#controls)
 + [Technical Notes](#technical-notes)
   + [XUI Scene Files](#xui-scene-files)
 + [Troubleshooting](#troubleshooting)
 + [Credits](#credits)
 
-## Features Showcase {#features-showcase}
+## Features Showcase <a name="features-showcase"></a>
 
 ### Direct3D Rendering
 
@@ -44,7 +44,7 @@ Native Xbox 360 controller input with full button and trigger support.
 
 XUI-based user interface with custom skin resources and Xbox 360 dashboard integration.
 
-## What's New {#whats-new}
+## What's New <a name="whats-new"></a>
 
 ### V1.0 (Latest)
 
@@ -164,7 +164,7 @@ XUI-based user interface with custom skin resources and Xbox 360 dashboard integ
   + **Preprocessor Definitions:** Added `EMUCRC32_STANDALONE` to all Xbox 360 configurations
   + **Build Configurations:** Release, Debug, and C core configurations all properly configured
 
-## Build {#build}
+## Build <a name="build"></a>
 
 ### Prerequisites
 
@@ -231,7 +231,7 @@ The compiled `.xex` executable can run on any Xbox 360 console that supports uns
 
 **Note:** Modifying Xbox 360 hardware may void warranties and violate terms of service. Use at your own risk. This software is intended for educational and homebrew development purposes.
 
-## Building the XZP Package (Customizing the XUI Skin) {#building-the-xzp-package-customizing-the-xui-skin}
+## Building the XZP Package (Customizing the XUI Skin) <a name="building-xzp-package"></a>
 
 The XZP (XUI Package) file contains all the skin resources (XUR files, images, fonts, etc.) used by the Xbox 360 UI. To customize the skin or add new XUR files, you'll need to rebuild the `Snes360.xzp` package.
 
@@ -257,7 +257,7 @@ The XZP (XUI Package) file contains all the skin resources (XUR files, images, f
    + Copy the newly created `Snes360.xzp`
    + Replace the existing `Snes360.xzp` in the `media` folder on your Snes360 build
 
-## Controls {#controls}
+## Controls <a name="controls"></a>
 
 ### Front-End (ROM Browser)
 
@@ -291,7 +291,7 @@ The XZP (XUI Package) file contains all the skin resources (XUR files, images, f
 
 > Note: Control mappings may vary based on the specific port implementation.
 
-## Technical Notes {#technical-notes}
+## Technical Notes <a name="technical-notes"></a>
 
 ### Dependencies
 
@@ -316,7 +316,7 @@ The Xbox 360 build uses a standalone CRC32 implementation to avoid linking again
 + Also provides `crc32()` wrapper matching zlib's signature for unzip code compatibility
 + Includes zlib.h for type definitions (`uLong`, `Bytef`, `uInt`) but uses standalone implementation
 
-### XUI Scene Files {#xui-scene-files}
+### XUI Scene Files <a name="xui-scene-files"></a>
 
 The Xbox 360 UI is built using XUI (Xbox User Interface) scene files. The main XUI files are located in `xbox/Skin/` and define the user interface screens:
 
@@ -348,7 +348,7 @@ The Xbox 360 UI is built using XUI (Xbox User Interface) scene files. The main X
 
 These XUI files are packaged into the `Snes360.xzp` archive along with associated resources (images, fonts, sounds) and loaded at runtime. Customizing these files allows you to modify the appearance and behavior of the Xbox 360 UI.
 
-## Troubleshooting {#troubleshooting}
+## Troubleshooting <a name="troubleshooting"></a>
 
 ### Runtime Issues
 
@@ -368,7 +368,7 @@ These XUI files are packaged into the `Snes360.xzp` archive along with associate
 + Check Xbox 360 audio settings
 + Ensure audio buffers are properly configured
 
-## Credits {#credits}
+## Credits <a name="credits"></a>
 
 ### Original Xbox 360 Port
 
