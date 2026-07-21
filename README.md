@@ -51,6 +51,8 @@ XUI-based user interface with custom skin resources and Xbox 360 dashboard integ
 + **Upgraded build toolchain**
   + Upgraded IDE to Microsoft Visual Studio 2010 SP1
   + Upgraded Xbox 360 XDK to v2.0.21256.3
++ **Increased optimization settings**
+  + Optimization flag was set to `Full Optimization (/Ox)`
 + **Pre-configured, portable and ready-to-use build**
   + Provides a pre-configured `settings.xml` file
   + All required files and folders already included in the package
@@ -399,6 +401,8 @@ r0wdy, Arak0n, kl0wn, idc, direw0lf, PeteNub, MomDad, Odb718, Angerwound, Redlin
   + Removed several unused files (most of them were IDE/compiler generated files)
   + Upgraded IDE to Microsoft Visual Studio 2010 SP1
   + Upgraded Xbox 360 XDK to v2.0.21256.3
+  + Fixed errors caused by the toolchain upgrade
+  + Applied maximum optimization settings
 + **frankischilling** - Current maintainer
   + Achievements removed for safety (prevents Xbox Live bans)
   + Build fixes and compatibility improvements

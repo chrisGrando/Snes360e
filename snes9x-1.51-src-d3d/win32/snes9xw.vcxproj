@@ -67,7 +67,7 @@
       </HeaderFileName>
     </Midl>
     <ClCompile>
-      <Optimization>MaxSpeed</Optimization>
+      <Optimization>Full</Optimization>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <AdditionalIncludeDirectories>$(XEDK)\include\xbox;$(ProjectDir);$(ProjectDir)\..\;$(ProjectDir)\..\..\;$(ProjectDir)\..\zLib;$(ProjectDir)\..\unzip;$(ProjectDir)\..\..\FMOD\api\inc;$(ProjectDir)\..\libPNG\src;$(ProjectDir)\..\snes9x</AdditionalIncludeDirectories>
