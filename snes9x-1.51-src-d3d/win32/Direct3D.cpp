@@ -217,7 +217,7 @@ bool CDirect3D::initialize(D3DDevice *pDev)
 		}
 	}
 
-	//D3DXCompileShaderFromFile("game:\\Media\\Shaders\\Super2xSaI.fx",NULL,NULL,"S_FRAGMENT","ps_3_0",D3DXSHADER_MICROCODE_BACKEND_NEW,&ppShader,NULL,NULL);
+	//D3DXCompileShaderFromFile("GAME:\\media\\shaders\\Super2xSaI.fx",NULL,NULL,"S_FRAGMENT","ps_3_0",D3DXSHADER_MICROCODE_BACKEND_NEW,&ppShader,NULL,NULL);
 	 
 	//hr = pDevice->CreatePixelShader((DWORD*)ppShader->GetBufferPointer(),&g_pPixelShader);
 	  

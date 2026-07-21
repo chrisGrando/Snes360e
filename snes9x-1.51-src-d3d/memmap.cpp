@@ -242,7 +242,7 @@ static bool8	stopMovie = TRUE;
 static char		LastRomFilename[_MAX_PATH + 1] = "";
 
 //extern void DoAchievo(DWORD AcheivoID);  // Achievements disabled
-extern void UpdatePresence(DWORD type);
+//extern void UpdatePresence(DWORD type);
 
 
 static const uint32	crc32Table[256] =
@@ -1159,7 +1159,7 @@ again:
 	}
 
 	 
-	UpdatePresence(CONTEXT_GAMESTATE_INGAME);
+	//UpdatePresence(CONTEXT_GAMESTATE_INGAME);
 		
     return (TRUE);
 }
@@ -1520,7 +1520,7 @@ bool8 CMemory::SaveSRAM (const char *filename)
 		size = (1 << (Multi.sramSizeB + 3)) * 128;
  
 		snesStoreage.WriteSaveGame(sramName,romName, (char *) (char *) Multi.sramB, (DWORD)size);
-		snesStoreage.WriteThumbnail(sramName, "game:\\media\\saveicon.png" );
+		snesStoreage.WriteThumbnail(sramName, "GAME:\\media\\saveicon.png" );
 
 		strcpy(ROMFilename, temp);
     }
@@ -1543,7 +1543,7 @@ bool8 CMemory::SaveSRAM (const char *filename)
 	{
 		 
 		snesStoreage.WriteSaveGame(sramName,romName, (char *) SRAM, (DWORD)size);
-		snesStoreage.WriteThumbnail(sramName, "game:\\media\\saveicon.png" );
+		snesStoreage.WriteThumbnail(sramName, "GAME:\\media\\saveicon.png" );
  
 		if (Settings.SPC7110RTC)
 			S9xSaveSPC7110RTC(&rtc_f9);

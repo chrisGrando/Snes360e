@@ -47,7 +47,7 @@ void SaveConfig(void)
 		snesStoreage.WriteStream(stream, (char *)&Settings, sizeof(Settings));
 		snesStoreage.CloseStream(stream, &xov);
 		CloseHandle(hEventComplete);
-		snesStoreage.WriteThumbnail("Snes360Config.dat", "game:\\media\\saveicon.png" );
+		snesStoreage.WriteThumbnail("Snes360Config.dat", "GAME:\\media\\saveicon.png" );
 	}
 
 }
@@ -73,7 +73,7 @@ HRESULT CRomListScene::OnNotifyPress( HXUIOBJ hObjPressed,
 			XMPPause( NULL );
 			nIndex = m_RomList.GetCurSel();
 						
-			XuiSceneCreate( L"file://game:/media/Snes360.xzp#..\\Xbox\\Skin\\", L"InGameOptions.xur", NULL, &hScene );
+			XuiSceneCreate( L"file://GAME:/media/Snes360.xzp#..\\Xbox\\Skin\\", L"InGameOptions.xur", NULL, &hScene );
 			this->NavigateForward(hScene);			
 			
 			RunEmulation((char *)romPath->second.c_str(), (char *)m_ListData[nIndex].c_str()); 	
@@ -328,7 +328,7 @@ HRESULT CRomList::OnNotify( XUINotify *hObj, BOOL& bHandled )
 
 	}
 
-	UpdatePresence(CONTEXT_GAMESTATE_BROWSING_ROMS);
+	//UpdatePresence(CONTEXT_GAMESTATE_BROWSING_ROMS);
 
 	return S_OK;
 

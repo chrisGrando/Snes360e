@@ -1,0 +1,28 @@
+﻿Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Snes360", "snes9x-1.51-src-d3d\win32\snes9xw.vcxproj", "{B86059D8-C9A6-46BE-8FBA-3170C54F1DFD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4DAABDBA-B137-4429-9175-D6CC8A1BAEEE} = {4DAABDBA-B137-4429-9175-D6CC8A1BAEEE}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TinyXML", "snes9x-1.51-src-d3d\TinyXML\TinyXML.vcxproj", "{4DAABDBA-B137-4429-9175-D6CC8A1BAEEE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Xbox 360 = Debug|Xbox 360
+		Release|Xbox 360 = Release|Xbox 360
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B86059D8-C9A6-46BE-8FBA-3170C54F1DFD}.Debug|Xbox 360.ActiveCfg = Debug|Xbox 360
+		{B86059D8-C9A6-46BE-8FBA-3170C54F1DFD}.Debug|Xbox 360.Build.0 = Debug|Xbox 360
+		{B86059D8-C9A6-46BE-8FBA-3170C54F1DFD}.Release|Xbox 360.ActiveCfg = Release|Xbox 360
+		{B86059D8-C9A6-46BE-8FBA-3170C54F1DFD}.Release|Xbox 360.Build.0 = Release|Xbox 360
+		{4DAABDBA-B137-4429-9175-D6CC8A1BAEEE}.Debug|Xbox 360.ActiveCfg = Debug|Xbox 360
+		{4DAABDBA-B137-4429-9175-D6CC8A1BAEEE}.Debug|Xbox 360.Build.0 = Debug|Xbox 360
+		{4DAABDBA-B137-4429-9175-D6CC8A1BAEEE}.Release|Xbox 360.ActiveCfg = Release|Xbox 360
+		{4DAABDBA-B137-4429-9175-D6CC8A1BAEEE}.Release|Xbox 360.Build.0 = Release|Xbox 360
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
