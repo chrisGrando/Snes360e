@@ -164,7 +164,7 @@ XUI-based user interface with custom skin resources and Xbox 360 dashboard integ
 + **Project Configuration:** Optimized build settings for Xbox 360
   + **Excluded Files:** `zLib/crc32.c` excluded from Xbox 360 builds to prevent symbol conflicts
   + **Preprocessor Definitions:** Added `EMUCRC32_STANDALONE` to all Xbox 360 configurations
-  + **Build Configurations:** Release, Debug, and C core configurations all properly configured
+  + **Build Configurations:** `Release` and `Debug` configurations all properly configured
 
 ## Build <a name="build"></a>
 
