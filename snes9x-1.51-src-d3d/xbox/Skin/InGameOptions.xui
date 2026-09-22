@@ -186,13 +186,13 @@
 <XuiCheckbox>
 <Properties>
 <Id>XuiAspectRatio</Id>
-<Width>452.953339</Width>
-<Height>47.880051</Height>
-<Position>131.726776,187.363953,0.000000</Position>
-<NavLeft>XuiSaveStateButton</NavLeft>
-<NavRight>XuiButtonReset</NavRight>
+<Width>456.000000</Width>
+<Height>48.000000</Height>
+<Position>130.279999,183.369995,0.000000</Position>
+<NavLeft>XuiButtonExitGame</NavLeft>
+<NavRight>XuiLoadStateButton</NavRight>
 <NavUp>XuiMuteAudio</NavUp>
-<NavDown>XuiRadioGroup1\XuiFilterSimple2x</NavDown>
+<NavDown>XuiFPS</NavDown>
 <Text>Keep Aspect Ratio</Text>
 </Properties>
 </XuiCheckbox>
@@ -239,11 +239,11 @@
 <XuiCheckbox>
 <Properties>
 <Id>XuiMuteAudio</Id>
-<Width>455.953308</Width>
-<Height>51.200043</Height>
+<Width>456.000000</Width>
+<Height>48.000000</Height>
 <Position>130.279999,143.147949,0.000000</Position>
 <NavLeft>XuiButtonExitGame</NavLeft>
-<NavRight>XuiButtonReset</NavRight>
+<NavRight>XuiLoadStateButton</NavRight>
 <NavUp>XuiPointFiltering</NavUp>
 <NavDown>XuiAspectRatio</NavDown>
 <Text>Mute Audio</Text>
@@ -252,12 +252,12 @@
 <XuiCheckbox>
 <Properties>
 <Id>XuiPointFiltering</Id>
-<Width>455.953308</Width>
-<Height>49.440048</Height>
+<Width>456.000000</Width>
+<Height>48.000000</Height>
 <Position>130.279999,102.932007,0.000000</Position>
 <NavLeft>XuiButtonExitGame</NavLeft>
-<NavRight>XuiSaveStateButton</NavRight>
-<NavUp>XuiSoundFilt</NavUp>
+<NavRight>XuiLoadStateButton</NavRight>
+<NavUp>XuiRadioGroup1\XuiFilterHQ2x</NavUp>
 <NavDown>XuiMuteAudio</NavDown>
 <Text>Point Filtering</Text>
 </Properties>
@@ -344,12 +344,12 @@
 <XuiCheckbox>
 <Properties>
 <Id>XuiFPS</Id>
-<Width>452.953339</Width>
-<Height>47.880051</Height>
-<Position>131.726776,227.363953,0.000000</Position>
-<NavLeft>XuiSaveStateButton</NavLeft>
-<NavRight>XuiButtonReset</NavRight>
-<NavUp>XuiMuteAudio</NavUp>
+<Width>456.000000</Width>
+<Height>48.000000</Height>
+<Position>130.279999,223.589996,0.000000</Position>
+<NavLeft>XuiButtonExitGame</NavLeft>
+<NavRight>XuiLoadStateButton</NavRight>
+<NavUp>XuiAspectRatio</NavUp>
 <NavDown>XuiRadioGroup1\XuiFilterSimple2x</NavDown>
 <Text>Display FPS</Text>
 </Properties>
