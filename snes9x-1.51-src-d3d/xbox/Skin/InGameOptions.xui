@@ -73,7 +73,9 @@
 <Width>329.000000</Width>
 <Height>37.000000</Height>
 <Position>28.080000,181.360001,0.000000</Position>
-<NavUp>XuiOptionsScene\XuiSaveStateButton</NavUp>
+<NavLeft>XuiOptionsScene\XuiButtonExitGame</NavLeft>
+<NavRight>XuiOptionsScene\XuiLoadStateButton</NavRight>
+<NavUp>XuiOptionsScene\XuiFPS</NavUp>
 <NavDown>XuiFilterScanlines</NavDown>
 <Text>Simple 2x</Text>
 </Properties>
@@ -84,6 +86,8 @@
 <Width>329.000000</Width>
 <Height>37.000000</Height>
 <Position>28.080000,223.360001,0.000000</Position>
+<NavLeft>XuiOptionsScene\XuiButtonExitGame</NavLeft>
+<NavRight>XuiOptionsScene\XuiLoadStateButton</NavRight>
 <NavUp>XuiFilterSimple2x</NavUp>
 <NavDown>XuiFilterTVMode</NavDown>
 <Text>Scanline</Text>
@@ -95,6 +99,8 @@
 <Width>329.000000</Width>
 <Height>37.000000</Height>
 <Position>28.080000,265.359985,0.000000</Position>
+<NavLeft>XuiOptionsScene\XuiButtonExitGame</NavLeft>
+<NavRight>XuiOptionsScene\XuiLoadStateButton</NavRight>
 <NavUp>XuiFilterScanlines</NavUp>
 <NavDown>XuiFilterSuperEagle</NavDown>
 <Text>TV Mode</Text>
@@ -106,6 +112,8 @@
 <Width>329.000000</Width>
 <Height>37.000000</Height>
 <Position>28.080000,307.359985,0.000000</Position>
+<NavLeft>XuiOptionsScene\XuiButtonExitGame</NavLeft>
+<NavRight>XuiOptionsScene\XuiLoadStateButton</NavRight>
 <NavUp>XuiFilterTVMode</NavUp>
 <NavDown>XuiFilter2xSAI</NavDown>
 <Text>Super Eagle</Text>
@@ -117,6 +125,8 @@
 <Width>329.000000</Width>
 <Height>37.000000</Height>
 <Position>28.080000,349.359985,0.000000</Position>
+<NavLeft>XuiOptionsScene\XuiButtonExitGame</NavLeft>
+<NavRight>XuiOptionsScene\XuiLoadStateButton</NavRight>
 <NavUp>XuiFilterSuperEagle</NavUp>
 <NavDown>XuiFilterEPX</NavDown>
 <Text>Super 2xSAI</Text>
@@ -128,6 +138,8 @@
 <Width>329.000000</Width>
 <Height>37.000000</Height>
 <Position>28.080000,391.359985,0.000000</Position>
+<NavLeft>XuiOptionsScene\XuiButtonExitGame</NavLeft>
+<NavRight>XuiOptionsScene\XuiLoadStateButton</NavRight>
 <NavUp>XuiFilter2xSAI</NavUp>
 <NavDown>XuiFilterHQ2x</NavDown>
 <Text>EPX</Text>
@@ -139,8 +151,10 @@
 <Width>329.000000</Width>
 <Height>37.000000</Height>
 <Position>28.080000,433.359985,0.000000</Position>
+<NavLeft>XuiOptionsScene\XuiButtonExitGame</NavLeft>
+<NavRight>XuiOptionsScene\XuiLoadStateButton</NavRight>
 <NavUp>XuiFilterEPX</NavUp>
-<NavDown>XuiFilterSimple2x</NavDown>
+<NavDown>XuiOptionsScene\XuiSaveStateButton</NavDown>
 <Text>HQ2x</Text>
 </Properties>
 </XuiRadioButton>
@@ -158,9 +172,9 @@
 <XuiButton>
 <Properties>
 <Id>XuiLoadStateButton</Id>
-<Width>152.320007</Width>
-<Height>47.015991</Height>
-<Position>510.263550,671.771606,0.000000</Position>
+<Width>156.000000</Width>
+<Height>47.000000</Height>
+<Position>542.000000,672.169983,0.000000</Position>
 <Visual>btn_single</Visual>
 <NavLeft>XuiSaveStateButton</NavLeft>
 <NavRight>XuiButtonReset</NavRight>
@@ -172,9 +186,9 @@
 <XuiButton>
 <Properties>
 <Id>XuiSaveStateButton</Id>
-<Width>155.439972</Width>
-<Height>46.615997</Height>
-<Position>348.143494,672.171570,0.000000</Position>
+<Width>156.000000</Width>
+<Height>47.000000</Height>
+<Position>383.000000,672.171570,0.000000</Position>
 <Visual>btn_single</Visual>
 <NavLeft>XuiButtonExitGame</NavLeft>
 <NavRight>XuiLoadStateButton</NavRight>
@@ -199,9 +213,9 @@
 <XuiButton>
 <Properties>
 <Id>XuiButtonTakePreview</Id>
-<Width>173.919983</Width>
-<Height>47.000061</Height>
-<Position>834.720093,671.787537,0.000000</Position>
+<Width>156.000000</Width>
+<Height>47.000000</Height>
+<Position>860.000000,672.169983,0.000000</Position>
 <Visual>btn_single</Visual>
 <NavLeft>XuiButtonReset</NavLeft>
 <NavRight>XuiButtonExitGame</NavRight>
@@ -213,9 +227,9 @@
 <XuiButton>
 <Properties>
 <Id>XuiButtonExitGame</Id>
-<Width>146.559937</Width>
-<Height>47.000061</Height>
-<Position>1019.040100,671.787537,0.000000</Position>
+<Width>156.000000</Width>
+<Height>47.000000</Height>
+<Position>1019.000000,672.169983,0.000000</Position>
 <Visual>btn_single</Visual>
 <NavLeft>XuiButtonTakePreview</NavLeft>
 <NavRight>XuiSaveStateButton</NavRight>
@@ -257,7 +271,7 @@
 <Position>130.279999,102.932007,0.000000</Position>
 <NavLeft>XuiButtonExitGame</NavLeft>
 <NavRight>XuiLoadStateButton</NavRight>
-<NavUp>XuiRadioGroup1\XuiFilterHQ2x</NavUp>
+<NavUp>XuiSaveStateButton</NavUp>
 <NavDown>XuiMuteAudio</NavDown>
 <Text>Point Filtering</Text>
 </Properties>
@@ -274,9 +288,9 @@
 <XuiButton>
 <Properties>
 <Id>XuiButtonReset</Id>
-<Width>156.640015</Width>
-<Height>47.000061</Height>
-<Position>672.000122,671.787537,0.000000</Position>
+<Width>156.000000</Width>
+<Height>47.000000</Height>
+<Position>701.000000,672.169983,0.000000</Position>
 <Visual>btn_single</Visual>
 <NavLeft>XuiLoadStateButton</NavLeft>
 <NavRight>XuiButtonTakePreview</NavRight>

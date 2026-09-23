@@ -339,7 +339,6 @@ CEffectScene::~CEffectScene()
 //--------------------------------------------------------------------------------------
 class CSnes360Menu : public CXuiSceneImpl
 {
- 
 
 public:
 	CXuiControl m_SignInLabel;
@@ -347,7 +346,6 @@ public:
 protected:
     CXuiControl m_RomList;
 	CXuiNavButton m_button2;  // Favorites button
-	CXuiControl m_button3;
 	CXuiControl m_button4;
 	CXuiControl m_button5;
 	CXuiControl m_Storage;
@@ -446,10 +444,6 @@ public:
 		{
 		 	snesStoreage.ShowDeviceUI();
 			return S_OK;
-		}
-		else if (hObjPressed == m_button3)
-		{
-			//XShowAchievementsUI( snesStoreage.GetSignedInUser() );  // Achievements disabled
 		}
 		else
 		{
@@ -559,9 +553,6 @@ public:
         {
             OutputDebugStringW(L"WARNING: Favorites button (XuiFavorites) not found!\n");
         }
-        GetChildById( L"XuiOptions", &m_button3 );
-		
-		m_button3.SetText(L"N/A");  // Rename achievements button to N/A (achievements disabled)
 		GetChildById( L"XuiAbout", &m_button4 );
 		GetChildById( L"XuiQuit", &m_button5 );
 		GetChildById( L"XuiStorageDevice", &m_Storage );
