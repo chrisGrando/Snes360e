@@ -17,20 +17,19 @@
 <Properties>
 <Id>EffectScene</Id>
 <Width>1311.000000</Width>
-<Height>739.000000</Height>
-<Position>12.000000,11.000000,0.000000</Position>
+<Height>743.320007</Height>
 <ClassOverride>EffectScene</ClassOverride>
 </Properties>
 <XuiGroup>
 <Properties>
-<Width>1309.095825</Width>
-<Height>737.968079</Height>
+<Width>1311.975708</Width>
+<Height>740.848083</Height>
 </Properties>
 <XuiImage>
 <Properties>
 <Id>XuiImage3</Id>
-<Width>1309.095947</Width>
-<Height>737.968079</Height>
+<Width>1311.975952</Width>
+<Height>742.288086</Height>
 <Position>0.000001,0.000061,0.000000</Position>
 <SizeMode>4</SizeMode>
 <ImagePath>SNES_World_with_Logo_v2_1920x1200.png</ImagePath>
@@ -95,14 +94,15 @@
 </XuiControl>
 <XuiButton>
 <Properties>
-<Id>XuiQuit</Id>
-<Width>468.555237</Width>
-<Height>45.696102</Height>
-<Position>441.239990,438.000000,0.000000</Position>
-<Visual>btn_GenresNoIcon</Visual>
-<NavUp>XuiAbout</NavUp>
-<NavDown>XuiRoms</NavDown>
-<Text>Exit Snes360</Text>
+<Id>XuiMusicToggle1</Id>
+<Width>215.856018</Width>
+<Height>28.815979</Height>
+<Position>539.763428,691.486755,0.000000</Position>
+<Show>false</Show>
+<Visual>LB_Button</Visual>
+<UnfocusedInput>true</UnfocusedInput>
+<Text>Adjust Screen</Text>
+<PressKey>22533</PressKey>
 </Properties>
 </XuiButton>
 <XuiNavButton>
@@ -110,7 +110,7 @@
 <Id>XuiRoms</Id>
 <Width>468.555237</Width>
 <Height>45.696102</Height>
-<Position>441.239990,246.000000,0.000000</Position>
+<Position>444.000000,265.000000,0.000000</Position>
 <Visual>btn_GenresNoIcon</Visual>
 <NavUp>XuiQuit</NavUp>
 <NavDown>XuiFavorites</NavDown>
@@ -123,7 +123,7 @@
 <Id>XuiFavorites</Id>
 <Width>468.555237</Width>
 <Height>45.696102</Height>
-<Position>441.243286,294.000000,0.000000</Position>
+<Position>444.000000,309.000000,0.000000</Position>
 <Visual>btn_GenresNoIcon</Visual>
 <NavUp>XuiRoms</NavUp>
 <NavDown>XuiStorageDevice</NavDown>
@@ -136,7 +136,7 @@
 <Id>XuiStorageDevice</Id>
 <Width>468.555237</Width>
 <Height>45.696102</Height>
-<Position>441.243286,342.000000,0.000000</Position>
+<Position>444.000000,353.000000,0.000000</Position>
 <Visual>btn_GenresNoIcon</Visual>
 <NavUp>XuiFavorites</NavUp>
 <NavDown>XuiAbout</NavDown>
@@ -148,7 +148,7 @@
 <Id>XuiAbout</Id>
 <Width>468.555237</Width>
 <Height>45.696102</Height>
-<Position>441.239990,390.000000,0.000000</Position>
+<Position>444.000000,397.000000,0.000000</Position>
 <Visual>btn_GenresNoIcon</Visual>
 <NavUp>XuiStorageDevice</NavUp>
 <NavDown>XuiQuit</NavDown>
@@ -157,15 +157,14 @@
 </XuiButton>
 <XuiButton>
 <Properties>
-<Id>XuiMusicToggle1</Id>
-<Width>215.856018</Width>
-<Height>28.815979</Height>
-<Position>539.763428,691.486755,0.000000</Position>
-<Show>false</Show>
-<Visual>LB_Button</Visual>
-<UnfocusedInput>true</UnfocusedInput>
-<Text>Adjust Screen</Text>
-<PressKey>22533</PressKey>
+<Id>XuiQuit</Id>
+<Width>468.555237</Width>
+<Height>45.696102</Height>
+<Position>444.000000,441.000000,0.000000</Position>
+<Visual>btn_GenresNoIcon</Visual>
+<NavUp>XuiAbout</NavUp>
+<NavDown>XuiRoms</NavDown>
+<Text>Exit Snes360</Text>
 </Properties>
 </XuiButton>
 </XuiScene>

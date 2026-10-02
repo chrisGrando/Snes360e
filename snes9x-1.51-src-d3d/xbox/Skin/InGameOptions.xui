@@ -6,8 +6,8 @@
 <XuiScene>
 <Properties>
 <Id>XuiOptionsScene</Id>
-<Width>1304.000000</Width>
-<Height>746.000000</Height>
+<Width>1331.359985</Width>
+<Height>760.400024</Height>
 <Position>-12.000000,-11.000000,0.000000</Position>
 <ClassOverride>InGameOptions</ClassOverride>
 <Visual>XuiSceneBlank</Visual>
@@ -43,18 +43,6 @@
 <Visual>BackgroundPanel</Visual>
 </Properties>
 </XuiControl>
-<XuiImage>
-<Properties>
-<Id>XuiPreviewImage</Id>
-<Width>1328.928467</Width>
-<Height>767.213501</Height>
-<Position>-10.174750,-13.052498,0.000000</Position>
-<Scale>1.030000,1.030000,1.030000</Scale>
-<Opacity>0.400000</Opacity>
-<Pivot>794.763428,539.937439,0.000000</Pivot>
-<SizeMode>4</SizeMode>
-</Properties>
-</XuiImage>
 <XuiRadioGroup>
 <Properties>
 <Id>XuiRadioGroup1</Id>
@@ -73,8 +61,8 @@
 <Width>329.000000</Width>
 <Height>37.000000</Height>
 <Position>28.080000,181.360001,0.000000</Position>
-<NavLeft>XuiOptionsScene\XuiButtonExitGame</NavLeft>
-<NavRight>XuiOptionsScene\XuiLoadStateButton</NavRight>
+<NavLeft>XuiOptionsScene\XuiSaveStateButton</NavLeft>
+<NavRight>XuiOptionsScene\XuiButtonExitGame</NavRight>
 <NavUp>XuiOptionsScene\XuiFPS</NavUp>
 <NavDown>XuiFilterScanlines</NavDown>
 <Text>Simple 2x</Text>
@@ -86,8 +74,8 @@
 <Width>329.000000</Width>
 <Height>37.000000</Height>
 <Position>28.080000,223.360001,0.000000</Position>
-<NavLeft>XuiOptionsScene\XuiButtonExitGame</NavLeft>
-<NavRight>XuiOptionsScene\XuiLoadStateButton</NavRight>
+<NavLeft>XuiOptionsScene\XuiSaveStateButton</NavLeft>
+<NavRight>XuiOptionsScene\XuiButtonExitGame</NavRight>
 <NavUp>XuiFilterSimple2x</NavUp>
 <NavDown>XuiFilterTVMode</NavDown>
 <Text>Scanline</Text>
@@ -99,8 +87,8 @@
 <Width>329.000000</Width>
 <Height>37.000000</Height>
 <Position>28.080000,265.359985,0.000000</Position>
-<NavLeft>XuiOptionsScene\XuiButtonExitGame</NavLeft>
-<NavRight>XuiOptionsScene\XuiLoadStateButton</NavRight>
+<NavLeft>XuiOptionsScene\XuiSaveStateButton</NavLeft>
+<NavRight>XuiOptionsScene\XuiButtonExitGame</NavRight>
 <NavUp>XuiFilterScanlines</NavUp>
 <NavDown>XuiFilterSuperEagle</NavDown>
 <Text>TV Mode</Text>
@@ -112,8 +100,8 @@
 <Width>329.000000</Width>
 <Height>37.000000</Height>
 <Position>28.080000,307.359985,0.000000</Position>
-<NavLeft>XuiOptionsScene\XuiButtonExitGame</NavLeft>
-<NavRight>XuiOptionsScene\XuiLoadStateButton</NavRight>
+<NavLeft>XuiOptionsScene\XuiSaveStateButton</NavLeft>
+<NavRight>XuiOptionsScene\XuiButtonExitGame</NavRight>
 <NavUp>XuiFilterTVMode</NavUp>
 <NavDown>XuiFilter2xSAI</NavDown>
 <Text>Super Eagle</Text>
@@ -125,8 +113,8 @@
 <Width>329.000000</Width>
 <Height>37.000000</Height>
 <Position>28.080000,349.359985,0.000000</Position>
-<NavLeft>XuiOptionsScene\XuiButtonExitGame</NavLeft>
-<NavRight>XuiOptionsScene\XuiLoadStateButton</NavRight>
+<NavLeft>XuiOptionsScene\XuiSaveStateButton</NavLeft>
+<NavRight>XuiOptionsScene\XuiButtonExitGame</NavRight>
 <NavUp>XuiFilterSuperEagle</NavUp>
 <NavDown>XuiFilterEPX</NavDown>
 <Text>Super 2xSAI</Text>
@@ -138,8 +126,8 @@
 <Width>329.000000</Width>
 <Height>37.000000</Height>
 <Position>28.080000,391.359985,0.000000</Position>
-<NavLeft>XuiOptionsScene\XuiButtonExitGame</NavLeft>
-<NavRight>XuiOptionsScene\XuiLoadStateButton</NavRight>
+<NavLeft>XuiOptionsScene\XuiSaveStateButton</NavLeft>
+<NavRight>XuiOptionsScene\XuiButtonExitGame</NavRight>
 <NavUp>XuiFilter2xSAI</NavUp>
 <NavDown>XuiFilterHQ2x</NavDown>
 <Text>EPX</Text>
@@ -151,8 +139,8 @@
 <Width>329.000000</Width>
 <Height>37.000000</Height>
 <Position>28.080000,433.359985,0.000000</Position>
-<NavLeft>XuiOptionsScene\XuiButtonExitGame</NavLeft>
-<NavRight>XuiOptionsScene\XuiLoadStateButton</NavRight>
+<NavLeft>XuiOptionsScene\XuiSaveStateButton</NavLeft>
+<NavRight>XuiOptionsScene\XuiButtonExitGame</NavRight>
 <NavUp>XuiFilterEPX</NavUp>
 <NavDown>XuiOptionsScene\XuiSaveStateButton</NavDown>
 <Text>HQ2x</Text>
@@ -202,9 +190,9 @@
 <Id>XuiAspectRatio</Id>
 <Width>456.000000</Width>
 <Height>48.000000</Height>
-<Position>130.279999,183.369995,0.000000</Position>
-<NavLeft>XuiButtonExitGame</NavLeft>
-<NavRight>XuiLoadStateButton</NavRight>
+<Position>130.279999,178.000000,0.000000</Position>
+<NavLeft>XuiSaveStateButton</NavLeft>
+<NavRight>XuiButtonExitGame</NavRight>
 <NavUp>XuiMuteAudio</NavUp>
 <NavDown>XuiFPS</NavDown>
 <Text>Keep Aspect Ratio</Text>
@@ -255,9 +243,9 @@
 <Id>XuiMuteAudio</Id>
 <Width>456.000000</Width>
 <Height>48.000000</Height>
-<Position>130.279999,143.147949,0.000000</Position>
-<NavLeft>XuiButtonExitGame</NavLeft>
-<NavRight>XuiLoadStateButton</NavRight>
+<Position>130.279999,140.000000,0.000000</Position>
+<NavLeft>XuiSaveStateButton</NavLeft>
+<NavRight>XuiButtonExitGame</NavRight>
 <NavUp>XuiPointFiltering</NavUp>
 <NavDown>XuiAspectRatio</NavDown>
 <Text>Mute Audio</Text>
@@ -268,9 +256,9 @@
 <Id>XuiPointFiltering</Id>
 <Width>456.000000</Width>
 <Height>48.000000</Height>
-<Position>130.279999,102.932007,0.000000</Position>
-<NavLeft>XuiButtonExitGame</NavLeft>
-<NavRight>XuiLoadStateButton</NavRight>
+<Position>130.279999,102.000000,0.000000</Position>
+<NavLeft>XuiSaveStateButton</NavLeft>
+<NavRight>XuiButtonExitGame</NavRight>
 <NavUp>XuiSaveStateButton</NavUp>
 <NavDown>XuiMuteAudio</NavDown>
 <Text>Point Filtering</Text>
@@ -299,37 +287,6 @@
 <Text>Reset Game</Text>
 </Properties>
 </XuiButton>
-<XuiFigure>
-<Properties>
-<Width>440.000000</Width>
-<Height>301.000000</Height>
-<Position>696.638367,318.233582,0.000000</Position>
-<Opacity>0.900000</Opacity>
-<Stroke>
-<Properties>
-<StrokeColor>0xff0f0f80</StrokeColor>
-</Properties>
-</Stroke>
-<Fill>
-<Properties>
-<FillColor>0xff0f0f0f</FillColor>
-<TransformVersion>1</TransformVersion>
-</Properties>
-</Fill>
-<Closed>true</Closed>
-<Points>4,0.000000,0.000000,0.000000,0.000000,440.000000,0.000000,0,440.000000,0.000000,440.000000,0.000000,440.000000,301.000000,0,440.000000,301.000000,440.000000,301.000000,0.000000,301.000000,0,0.000000,301.000000,0.000000,301.000000,0.000000,0.000000,0,</Points>
-</Properties>
-</XuiFigure>
-<XuiImage>
-<Properties>
-<Id>XuiPreviewSmall</Id>
-<Width>414.639954</Width>
-<Height>276.879974</Height>
-<Position>707.360107,331.720032,0.000000</Position>
-<Opacity>0.800000</Opacity>
-<SizeMode>4</SizeMode>
-</Properties>
-</XuiImage>
 <XuiText>
 <Properties>
 <Id>XuiText1</Id>
@@ -360,14 +317,48 @@
 <Id>XuiFPS</Id>
 <Width>456.000000</Width>
 <Height>48.000000</Height>
-<Position>130.279999,223.589996,0.000000</Position>
-<NavLeft>XuiButtonExitGame</NavLeft>
-<NavRight>XuiLoadStateButton</NavRight>
+<Position>130.279999,216.000000,0.000000</Position>
+<NavLeft>XuiSaveStateButton</NavLeft>
+<NavRight>XuiButtonExitGame</NavRight>
 <NavUp>XuiAspectRatio</NavUp>
 <NavDown>XuiRadioGroup1\XuiFilterSimple2x</NavDown>
 <Text>Display FPS</Text>
 </Properties>
 </XuiCheckbox>
+<XuiFigure>
+<Properties>
+<Id>XuiPreviewPlaceholder</Id>
+<Width>440.000000</Width>
+<Height>301.000000</Height>
+<Position>696.638367,318.233582,0.000000</Position>
+<Opacity>0.900000</Opacity>
+<Anchor>12</Anchor>
+<Stroke>
+<Properties>
+<StrokeColor>0xff0f0f80</StrokeColor>
+</Properties>
+</Stroke>
+<Fill>
+<Properties>
+<FillColor>0xff0f0f0f</FillColor>
+<TransformVersion>1</TransformVersion>
+</Properties>
+</Fill>
+<Closed>true</Closed>
+<Points>4,0.000000,0.000000,0.000000,0.000000,440.000000,0.000000,0,440.000000,0.000000,440.000000,0.000000,440.000000,301.000000,0,440.000000,301.000000,440.000000,301.000000,0.000000,301.000000,0,0.000000,301.000000,0.000000,301.000000,0.000000,0.000000,0,</Points>
+</Properties>
+</XuiFigure>
+<XuiImage>
+<Properties>
+<Id>XuiPreviewSmall</Id>
+<Width>439.839966</Width>
+<Height>300.879944</Height>
+<Position>696.560120,317.320038,0.000000</Position>
+<Opacity>0.800000</Opacity>
+<Anchor>12</Anchor>
+<SizeMode>4</SizeMode>
+</Properties>
+</XuiImage>
 <XuiTextureEffect>
 <Properties>
 <Id>XuiTextureEffect1</Id>

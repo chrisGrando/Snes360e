@@ -177,6 +177,7 @@
 #include "../netplay.h"
 
 #include "wsnes9x.h"
+#include "screenshot.h"
 #include "Storage.h"
 
 #include "render.h"
@@ -190,11 +191,13 @@
 #include "direct3d.h"
 #include "Storage.h"
 #include "RomSettings.h"
+#include "PauseScreenshotPreview.h"
 
 extern CDirect3D Direct3D;
 extern CSnes360App app;
 extern GameStorage snesStoreage;
 extern CRomPathSettings romPaths;
+extern bool GetScreenshotNow;
 
 //#define GENERATE_OFFSETS_H
 
@@ -723,6 +726,10 @@ void S9xWinScanJoypads ()
 
 				if ((state.Gamepad.wButtons & XINPUT_GAMEPAD_LEFT_THUMB && state.Gamepad.wButtons & XINPUT_GAMEPAD_RIGHT_THUMB))
 				{					 
+					GetScreenshotNow = true;
+					DeleteFile("GAME:\\media\\preview.png");
+					HasScreenshotSucceed = S9xDoScreenshot(256, 224, "GAME:\\media\\preview.png");
+
 					if(CPU.SRAMModified) 
 					{
 						S9xAutoSaveSRAM();

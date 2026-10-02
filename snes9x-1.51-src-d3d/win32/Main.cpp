@@ -17,7 +17,6 @@
 
 extern void XboxSetDefaultValues();
 
-
 //struct AchievementPicture  // Achievements disabled
 //{
 //    IDirect3DTexture9* Texture;        // Texture of the picture
@@ -684,14 +683,11 @@ HRESULT CSnes360App::UnregisterXuiClasses()
 
 IDirect3DDevice9 *pDevice;
 D3DPRESENT_PARAMETERS d3dpp;
-BOOL IsCurrentlyInGame = false;
-
 
 CSnes360App app;
 CRomPathSettings romPaths;
 HXUIOBJ phObj = NULL;
  
-
 VOID __cdecl main()
 {
     // Declare an instance of the XUI framework application.
@@ -779,66 +775,58 @@ VOID __cdecl main()
 	//m_Achievements = new BYTE[XACHIEVEMENT_SIZE_FULL * ACHIEVEMENT_COUNT];  // Achievements disabled
 	//DoAchievo(ACHIEVEMENT_HOMEBREW_UNLOCKED);  // Achievements disabled
 
-    while( TRUE ) {
-
-		if (!IsCurrentlyInGame)
-		{			 
-			// Render game graphics.
+    while( TRUE )
+	{	
+		// Render game graphics.
+		RenderGame( pDevice );
  
-			RenderGame( pDevice );
- 
-			snesStoreage.Update();
+		snesStoreage.Update();
 			 
-			// Update XUI
-			app.RunFrame();
+		// Update XUI
+		app.RunFrame();
 			
-			// Per-frame updates for ROM list scene (keyboard handling, etc.)
-			if (hRomListScene)
+		// Per-frame updates for ROM list scene (keyboard handling, etc.)
+		if (hRomListScene)
+		{
+			CRomListScene* pScene = NULL;
+			if (SUCCEEDED(XuiObjectFromHandle(hRomListScene, (VOID**)&pScene)))
 			{
-				CRomListScene* pScene = NULL;
-				if (SUCCEEDED(XuiObjectFromHandle(hRomListScene, (VOID**)&pScene)))
-				{
-					pScene->UpdatePerFrame();
-				}
+				pScene->UpdatePerFrame();
 			}
-			
-			// Per-frame updates for Favorites list scene (Game Genie keyboard handling, etc.)
-			if (hFavoritesListScene)
-			{
-				CFavoritesListScene* pScene = NULL;
-				if (SUCCEEDED(XuiObjectFromHandle(hFavoritesListScene, (VOID**)&pScene)))
-				{
-					pScene->UpdatePerFrame();
-				}
-			}
-
-			// Render XUI
-			hr = app.Render();
-
-			/*D3DXMATRIX matView;
-			int NewWidth = uWidth - (HOverscan * 2);
-			int NewHeight = uHeight - (VOverscan * 2);
-			D3DXVECTOR2 vScaling = D3DXVECTOR2( NewWidth / 1280.0f, NewHeight / 720.0f );
-			D3DXVECTOR2 vTranslation = D3DXVECTOR2( (float)HOverscan, (float)VOverscan );
-			D3DXMatrixTransformation2D( &matView, NULL, 0.0f, &vScaling, NULL, 0.0f, &vTranslation );
-			XuiRenderSetViewTransform( app.GetDC(), &matView );*/
-
-			
-
-			// Update XUI Timers
-			hr = XuiTimersRun();
-
-			// Present the frame.
-			pDevice->Present( NULL, NULL, NULL, NULL );
 		}
+			
+		// Per-frame updates for Favorites list scene (Game Genie keyboard handling, etc.)
+		if (hFavoritesListScene)
+		{
+			CFavoritesListScene* pScene = NULL;
+			if (SUCCEEDED(XuiObjectFromHandle(hFavoritesListScene, (VOID**)&pScene)))
+			{
+				pScene->UpdatePerFrame();
+			}
+		}
+
+		// Render XUI
+		hr = app.Render();
+
+		/*D3DXMATRIX matView;
+		int NewWidth = uWidth - (HOverscan * 2);
+		int NewHeight = uHeight - (VOverscan * 2);
+		D3DXVECTOR2 vScaling = D3DXVECTOR2( NewWidth / 1280.0f, NewHeight / 720.0f );
+		D3DXVECTOR2 vTranslation = D3DXVECTOR2( (float)HOverscan, (float)VOverscan );
+		D3DXMatrixTransformation2D( &matView, NULL, 0.0f, &vScaling, NULL, 0.0f, &vTranslation );
+		XuiRenderSetViewTransform( app.GetDC(), &matView );*/
+
+		// Update XUI Timers
+		hr = XuiTimersRun();
+
+		// Present the frame.
+		pDevice->Present( NULL, NULL, NULL, NULL );
     }
 
     // Free resources, unregister custom classes, and exit.
 	//delete(m_Achievements);  // Achievements disabled
     app.Uninit();
     pDevice->Release();
-
-
 }
 
 

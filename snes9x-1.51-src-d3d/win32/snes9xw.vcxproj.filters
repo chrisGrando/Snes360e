@@ -360,9 +360,6 @@
     <ClCompile Include="Main.cpp">
       <Filter>Xbox</Filter>
     </ClCompile>
-    <ClCompile Include="Options.cpp">
-      <Filter>Xbox</Filter>
-    </ClCompile>
     <ClCompile Include="RomList.cpp">
       <Filter>Xbox</Filter>
     </ClCompile>
@@ -494,9 +491,6 @@
     <ClInclude Include="Main.h">
       <Filter>Xbox</Filter>
     </ClInclude>
-    <ClInclude Include="Options.h">
-      <Filter>Xbox</Filter>
-    </ClInclude>
     <ClInclude Include="RomList.h">
       <Filter>Xbox</Filter>
     </ClInclude>
@@ -517,6 +511,12 @@
     </ClInclude>
     <ClInclude Include="..\jma\CRC32lib.h">
       <Filter>JMA</Filter>
+    </ClInclude>
+    <ClInclude Include="RunningData.h">
+      <Filter>Xbox</Filter>
+    </ClInclude>
+    <ClInclude Include="PauseScreenshotPreview.h">
+      <Filter>Xbox</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

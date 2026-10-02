@@ -6,10 +6,11 @@
 #include <set>
 //#include "Snes 360.spa.h"  // Achievements disabled
 #include "XboxContext.h"  // Minimal context/property definitions (achievements excluded)
- 
+#include "RunningData.h"
 
+extern char* CurrentRomFilePath;
+extern char* CurrentRomFileName;
 extern int RunEmulation(char *path, char *RomName);
-extern BOOL IsCurrentlyInGame;
 extern HXUIOBJ phObj;
 extern HXUIOBJ hScene; 
 extern HXUIOBJ hMainScene;
@@ -76,7 +77,9 @@ HRESULT CRomListScene::OnNotifyPress( HXUIOBJ hObjPressed,
 			XuiSceneCreate( L"file://GAME:/media/Snes360.xzp#..\\Xbox\\Skin\\", L"InGameOptions.xur", NULL, &hScene );
 			this->NavigateForward(hScene);			
 			
-			RunEmulation((char *)romPath->second.c_str(), (char *)m_ListData[nIndex].c_str()); 	
+			CurrentRomFilePath = (char *)romPath->second.c_str();
+			CurrentRomFileName = (char *)m_ListData[nIndex].c_str();
+			RunEmulation(CurrentRomFilePath, CurrentRomFileName);
 
 			SaveConfig();
 
@@ -303,6 +306,7 @@ HRESULT CRomList::OnNotify( XUINotify *hObj, BOOL& bHandled )
 	int nIndex = 0;
 	switch(hObj->dwNotify)
 	{
+		case XN_SET_FOCUS:
 		case XN_SELCHANGED:
 			 						 
 			nIndex = XuiListGetCurSel( this->m_hObj, NULL );
@@ -643,9 +647,6 @@ HRESULT CRomListScene::ShowSearchKeyboard()
 // UpdatePerFrame - called from main loop for per-frame updates (like NES emu)
 VOID CRomListScene::UpdatePerFrame()
 {
-	// Only act while we're in the ROM list scene (not during emulation)
-	if (IsCurrentlyInGame) return;
-	
 	// Check for keyboard completion if one is pending (non-blocking check)
 	if (m_keyboardPending && m_keyboardEvent)
 	{

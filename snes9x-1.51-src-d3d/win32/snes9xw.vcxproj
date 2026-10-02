@@ -396,7 +396,6 @@
     <ClCompile Include="GeneralFunctions.cpp" />
     <ClCompile Include="InGameOptions.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Options.cpp" />
     <ClCompile Include="RomList.cpp" />
     <ClCompile Include="RomSettings.cpp" />
     <ClCompile Include="FavoritesList.cpp" />
@@ -470,6 +469,7 @@
     <CustomBuildStep Include="Direct3D.h" />
     <ClInclude Include="IS9xSoundOutput.h" />
     <ClInclude Include="render.h" />
+    <ClInclude Include="RunningData.h" />
     <ClInclude Include="snes_ntsc.h" />
     <ClInclude Include="snes_ntsc_config.h" />
     <ClInclude Include="snes_ntsc_impl.h" />
@@ -502,7 +502,7 @@
     <ClInclude Include="KernelDefines.h" />
     <ClInclude Include="KernelExports.h" />
     <ClInclude Include="Main.h" />
-    <ClInclude Include="Options.h" />
+    <ClInclude Include="PauseScreenshotPreview.h" />
     <ClInclude Include="RomList.h" />
     <ClInclude Include="RomSettings.h" />
     <ClInclude Include="FavoritesList.h" />

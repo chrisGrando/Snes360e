@@ -59,6 +59,7 @@ protected:
 
 	CXuiControl m_ExitGame;
 	CXuiControl m_TakePreview;
+	CXuiControl m_ResetGame;
  
 	
 	CXuiControl m_Simple2x;
@@ -69,7 +70,6 @@ protected:
 	CXuiControl m_HQ2x;
 	CXuiControl m_EPX;
 
-	CXuiImageElement m_PreviewImage;
 	CXuiImageElement m_PreviewSmallImage;
 
 	CXuiCheckbox m_AspectRatio;
@@ -87,29 +87,20 @@ protected:
     // Message map.
     XUI_BEGIN_MSG_MAP()
 		XUI_ON_XM_INIT( OnInit )
-		XUI_ON_XM_NOTIFY_PRESS( OnNotifyPress )	
-		XUI_ON_XM_MESSAGE_ON_INGAME_MENU( OnInGameMenu )
+		XUI_ON_XM_NOTIFY_PRESS( OnNotifyPress )
+		XUI_ON_XM_NOTIFY( OnNotify )
     XUI_END_MSG_MAP()
 
-	
 
-
- 
 public:
     HRESULT OnInit( XUIMessageInit* pInitData, BOOL& bHandled );
 	HRESULT OnNotifyPress( HXUIOBJ hObjPressed, BOOL& bHandled );
-	HRESULT OnInGameMenu ( int iVal1, BOOL& bHandled );
+	HRESULT OnNotify( XUINotify *hObj, BOOL& bHandled );
 	VOID    SetEffectValue( INT nValue );
-
-	 
-public:
 
     // Define the class. The class name must match the ClassOverride property
     // set for the scene in the UI Authoring tool.
     XUI_IMPLEMENT_CLASS( CInGameOptions, L"InGameOptions", XUI_CLASS_SCENE )
 };
-
-
- 
 
 #endif

@@ -11,8 +11,9 @@
 #include "GeneralFunctions.h"
 #include "cheats.h"  // For Game Genie code processing
 
+extern char* CurrentRomFilePath;
+extern char* CurrentRomFileName;
 extern int RunEmulation(char *path, char *RomName);
-extern BOOL IsCurrentlyInGame;
 extern HXUIOBJ phObj;
 extern HXUIOBJ hScene; 
 extern HXUIOBJ hMainScene;
@@ -168,6 +169,7 @@ HRESULT CFavoritesList::OnNotify( XUINotify *hObj, BOOL& bHandled )
 	int nIndex = 0;
 	switch(hObj->dwNotify)
 	{
+		case XN_SET_FOCUS:
 		case XN_SELCHANGED:
 			nIndex = XuiListGetCurSel( this->m_hObj, NULL );
 			
@@ -307,7 +309,9 @@ HRESULT CFavoritesListScene::OnNotifyPress( HXUIOBJ hObjPressed,
 				this->NavigateForward(hScene);
 				
 				// Pass directory and filename separately (like the ROM list does)
-				RunEmulation((char *)dir.c_str(), (char *)file.c_str()); 	
+				CurrentRomFilePath = (char *)dir.c_str();
+				CurrentRomFileName = (char *)file.c_str();
+				RunEmulation(CurrentRomFilePath, CurrentRomFileName); 	
 				
 				SaveConfig();
 				
@@ -485,7 +489,9 @@ VOID CFavoritesListScene::LaunchPendingRom()
 		this->NavigateForward(hScene);
 		
 		// Pass directory and filename separately
-		RunEmulation((char *)dir.c_str(), (char *)file.c_str());
+		CurrentRomFilePath = (char *)dir.c_str();
+		CurrentRomFileName = (char *)file.c_str();
+		RunEmulation(CurrentRomFilePath, CurrentRomFileName);
 		
 		SaveConfig();
 		
@@ -500,9 +506,6 @@ VOID CFavoritesListScene::LaunchPendingRom()
 // UpdatePerFrame - called from main loop for per-frame updates
 VOID CFavoritesListScene::UpdatePerFrame()
 {
-	// Only act while we're in the favorites list scene (not during emulation)
-	if (IsCurrentlyInGame) return;
-	
 	// Check for Game Genie keyboard completion if one is pending (non-blocking check)
 	if (m_gameGenieKeyboardPending && m_gameGenieKeyboardEvent)
 	{
