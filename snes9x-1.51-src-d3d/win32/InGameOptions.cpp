@@ -23,6 +23,13 @@ extern int RunEmulation(char *path, char *RomName);
 extern bool GetScreenshotNow;
 extern bool HasScreenshotSucceed;
 
+CInGameOptions* PauseMenuOptions = nullptr;
+
+CInGameOptions::CInGameOptions()
+{
+	PauseMenuOptions = this;
+}
+
 // Handler for the XM_NOTIFY message
 HRESULT CInGameOptions::OnNotifyPress( HXUIOBJ hObjPressed, BOOL& bHandled )
     {
@@ -151,7 +158,7 @@ HRESULT CInGameOptions::OnNotifyPress( HXUIOBJ hObjPressed, BOOL& bHandled )
 			if (S9xDoScreenshot(256, 224))
 			{
 				const WCHAR * button_text = L"OK";				
-				ShowMessageBoxEx(NULL,NULL,L"Snes360 - Take Preview", L"Preview Saved.", 1, (LPCWSTR*)&button_text,NULL,  XUI_MB_CENTER_ON_PARENT, NULL);
+				ShowMessageBoxEx(NULL, NULL, L"Snes360 - Take Preview", L"Preview Saved.", 1, (LPCWSTR*)&button_text, NULL, XUI_MB_CENTER_ON_PARENT, NULL);
  
 				bHandled = TRUE;
 				return S_OK;
@@ -164,6 +171,9 @@ HRESULT CInGameOptions::OnNotifyPress( HXUIOBJ hObjPressed, BOOL& bHandled )
 				S9xAutoSaveSRAM();
 				CPU.SRAMModified=FALSE;
 			}
+
+			const WCHAR * button_text = L"OK";				
+			ShowMessageBoxEx(NULL, NULL, L"Snes360 - Reset Game", L"Game has been restarted.", 1, (LPCWSTR*)&button_text, NULL, XUI_MB_CENTER_ON_PARENT, NULL);
 
 			Settings.Paused = false;
 			Settings.ForcedPause = false;
@@ -226,20 +236,6 @@ HRESULT CInGameOptions::OnNotifyPress( HXUIOBJ hObjPressed, BOOL& bHandled )
         bHandled = TRUE;
         return S_OK;
     }
-
-HRESULT CInGameOptions::OnNotify( XUINotify *hObj, BOOL& bHandled )
-{
-	if (GetScreenshotNow && HasScreenshotSucceed)
-	{
-		GetScreenshotNow = false;
-		m_PreviewSmallImage.DiscardResources(XUI_DISCARD_ALL);
-		m_PreviewSmallImage.SetBasePath(L"file://game:/media/");
-		m_PreviewSmallImage.SetImagePath(L"file://game:/media/preview.png");
-	}
-
-	bHandled = TRUE;
-    return S_OK;
-}
 
     //----------------------------------------------------------------------------------
     // Performs initialization tasks - retreives controls.
@@ -348,14 +344,6 @@ HRESULT CInGameOptions::OnInit( XUIMessageInit* pInitData, BOOL& bHandled )
 
 		SetEffectValue( 20 );
 
-		//I don't know how to fix this yet...
-		/*if (HasScreenshotSucceed)
-		{
-			m_PreviewSmallImage.DiscardResources(XUI_DISCARD_ALL);
-			m_PreviewSmallImage.SetBasePath(L"file://game:/media/");
-			m_PreviewSmallImage.SetImagePath(L"file://game:/media/preview.png");
-		}*/
-
         return S_OK;
     }
 
@@ -369,6 +357,17 @@ VOID   CInGameOptions::SetEffectValue( INT nValue )
 
         
         pEffectScene->SetDisplacementFactor( nValue / 50.0f );
+}
+
+void CInGameOptions::UpgradeScreenshotPreview()
+{
+	if (GetScreenshotNow && HasScreenshotSucceed)
+	{
+		GetScreenshotNow = false;
+		m_PreviewSmallImage.DiscardResources(XUI_DISCARD_ALL);
+		m_PreviewSmallImage.SetBasePath(L"file://game:/media/");
+		m_PreviewSmallImage.SetImagePath(L"file://game:/media/preview.png");
+	}
 }
 
 void InGameMenuFirstFunc(XUIMessage *pMsg, InGameMenuStruct* pData, int iVal1)

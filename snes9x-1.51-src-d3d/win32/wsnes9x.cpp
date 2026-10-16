@@ -342,6 +342,7 @@ extern SCheatData Cheat;
 extern bool8 do_frame_adjust;
 extern HXUIOBJ phObj;
 extern HXUIOBJ hScene;
+//extern CInGameOptions* PauseMenuOptions;
 
 HINSTANCE g_hInst;
 
@@ -3272,6 +3273,7 @@ int RunEmulation(char *path, char *RomName)
 					InGameMenuStruct msgData;
 					InGameMenuFirstFunc( &xuiMsg, &msgData, 1 );
 					XuiSendMessage( hScene, &xuiMsg );
+					if (PauseMenuOptions != nullptr) PauseMenuOptions->UpgradeScreenshotPreview();
 
 					once = true;
 					wasInXUI = true;

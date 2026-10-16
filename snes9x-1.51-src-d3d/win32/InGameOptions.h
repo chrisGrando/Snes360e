@@ -16,8 +16,6 @@
 
 #include "GeneralFunctions.h"
 
-
-
 #ifndef INGAMEOPTIONS_H
 #define INGAMEOPTIONS_H
  
@@ -29,7 +27,6 @@ typedef struct
     int iVal1;    
 }
 InGameMenuStruct;
-
 
 void InGameMenuFirstFunc(XUIMessage *pMsg, InGameMenuStruct* pData, int iVal1);
 
@@ -88,19 +85,21 @@ protected:
     XUI_BEGIN_MSG_MAP()
 		XUI_ON_XM_INIT( OnInit )
 		XUI_ON_XM_NOTIFY_PRESS( OnNotifyPress )
-		XUI_ON_XM_NOTIFY( OnNotify )
     XUI_END_MSG_MAP()
 
 
 public:
+	CInGameOptions();
     HRESULT OnInit( XUIMessageInit* pInitData, BOOL& bHandled );
 	HRESULT OnNotifyPress( HXUIOBJ hObjPressed, BOOL& bHandled );
-	HRESULT OnNotify( XUINotify *hObj, BOOL& bHandled );
 	VOID    SetEffectValue( INT nValue );
+	void	UpgradeScreenshotPreview();
 
     // Define the class. The class name must match the ClassOverride property
     // set for the scene in the UI Authoring tool.
     XUI_IMPLEMENT_CLASS( CInGameOptions, L"InGameOptions", XUI_CLASS_SCENE )
 };
+
+extern CInGameOptions* PauseMenuOptions;
 
 #endif
