@@ -17,9 +17,9 @@
 <XuiScene>
 <Properties>
 <Id>EffectScene</Id>
-<Width>1311.000000</Width>
+<Width>1307.543945</Width>
 <Height>739.000000</Height>
-<Position>12.000000,11.000000,0.000000</Position>
+<Position>12.000000,10.999999,0.000000</Position>
 <ClassOverride>EffectScene</ClassOverride>
 </Properties>
 <XuiImage>

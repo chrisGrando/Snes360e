@@ -172,12 +172,20 @@ HRESULT CInGameOptions::OnNotifyPress( HXUIOBJ hObjPressed, BOOL& bHandled )
 				CPU.SRAMModified=FALSE;
 			}
 
-			const WCHAR * button_text = L"OK";				
-			ShowMessageBoxEx(NULL, NULL, L"Snes360 - Reset Game", L"Game has been restarted.", 1, (LPCWSTR*)&button_text, NULL, XUI_MB_CENTER_ON_PARENT, NULL);
+			//Emulate "Back To Game" button press
+			m_ResetGame.SetPress(false);
+			m_ResetGame.SetPressed(false, XUSER_INDEX_ANY);
+			m_ResetGame.PlayStandardVisualOnFocusChanging(true);
+			SetCurSel(GetCurSel(&m_ResetGame));
+			m_BackToGame.SetPress(true);
+			m_BackToGame.SetPressed(true, XUSER_INDEX_ANY);
 
+			//Unpause
 			Settings.Paused = false;
 			Settings.ForcedPause = false;
 			S9xSetSoundMute(FALSE);
+
+			//Restart current ROM emulation
 			RunEmulation(CurrentRomFilePath, CurrentRomFileName);
 
 			bHandled = TRUE;
