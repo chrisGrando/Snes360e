@@ -1,14 +1,17 @@
 # Snes360 Enhanced
 
 > [!NOTE]
-> This is a fork that merely upgrades the build toolchain, reorganizes and cleans up the structure of the repository.</br>
-> All credits go to [frankischilling](https://github.com/frankischilling) for the creation of Snes360 Enhanced.
+> This is a fork that merely changes a few things here and there...</br>
+> All credits go to [frankischilling](https://github.com/frankischilling) for the creation of Snes360 Enhanced.</br></br>
+> Due to lack of free time, I will not be able to continue working on this project after version 1.1 get released. Feel free to continue the project in my place.
+
+![Home Screen](https://github.com/chrisGrando/Snes360e/blob/main/SPLASH.jpg?raw=true)
 
 Enhanced Xbox 360 port of the Snes9x v1.51 emulator, focused on Direct3D rendering and Xbox 360-specific optimizations. Core emulation code remains intact; improvements are limited to the Xbox UI layer (XUI scenes, Direct3D rendering, XAudio2 audio, input handling).
 
 Based on the original Xbox 360 port (Snes360 v0.32 Beta, credited to "Anonymous" in source code). **ModernVintageGamer (Dimitris)** worked extensively on the original port and **provided the source code** that made this edition possible. This enhanced version **removes all achievement functionality** to prevent Xbox Live bans, along with build fixes and C89 compatibility improvements.
 
-**Current Version: v1.0**
+**Current Version: v1.1**
 
 + **Toolchain:** Microsoft Visual Studio 2010 SP1
 + **SDK:** Xbox 360 XDK v2.0.21256.3
@@ -46,7 +49,17 @@ XUI-based user interface with custom skin resources and Xbox 360 dashboard integ
 
 ## What's New <a name="whats-new"></a>
 
-### V1.0 (Latest)
+### V1.1 (Latest)
+
++ **UI enhancements and bug fixes**
+  + Fixed "Display FPS" option being inaccessible
+  + Implemented "Reset Game" option button
+  + Preview picture in pause menu now actually works
+  + Fixed preview picture in "ROM Browser" and "Favorites" screens not working properly
+  + Removed unused option in main menu ("N/A" button)
+  + Fixed buttons poor alignment
+
+### V1.0
 
 + **Upgraded build toolchain**
   + Upgraded IDE to Microsoft Visual Studio 2010 SP1
@@ -372,6 +385,8 @@ These XUI files are packaged into the `Snes360.xzp` archive along with associate
 
 ## Credits <a name="credits"></a>
 
+![Credits Screen](https://github.com/chrisGrando/Snes360e/blob/main/CREDITS.jpg?raw=true)
+
 ### Original Xbox 360 Port
 
 + **Anonymous** - Original Xbox 360 port developer (chose to remain anonymous)
@@ -403,6 +418,11 @@ r0wdy, Arak0n, kl0wn, idc, direw0lf, PeteNub, MomDad, Odb718, Angerwound, Redlin
   + Upgraded Xbox 360 XDK to v2.0.21256.3
   + Fixed errors caused by the toolchain upgrade
   + Applied maximum optimization settings
+  + Fixed "Display FPS" option being inaccessible
+  + Implemented "Reset Game" option button
+  + Preview picture in pause menu now actually works
+  + Fixed preview picture in "ROM Browser" and "Favorites" screens not working properly
+  + Removed unused option in main menu ("N/A" button)
 + **frankischilling** - Current maintainer
   + Achievements removed for safety (prevents Xbox Live bans)
   + Build fixes and compatibility improvements
